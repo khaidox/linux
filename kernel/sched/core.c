@@ -4217,6 +4217,7 @@ int wake_up_state(struct task_struct *p, unsigned int state)
 {
 	return try_to_wake_up(p, state, 0);
 }
+EXPORT_SYMBOL_GPL(wake_up_state);
 
 /*
  * Perform scheduler related setup for a newly forked process p.
