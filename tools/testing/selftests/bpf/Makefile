@@ -26,7 +26,7 @@ CFLAGS += -g -O0 -rdynamic -Wall $(GENFLAGS) $(SAN_CFLAGS)		\
 	  -I$(TOOLSINCDIR) -I$(APIDIR) -I$(OUTPUT)			\
 	  -Dbpf_prog_load=bpf_prog_test_load				\
 	  -Dbpf_load_program=bpf_test_load_program
-LDLIBS += -lcap -lelf -lz -lrt -lpthread
+LDLIBS += -lelf -lz -lrt -lpthread
 
 # Silence some warnings when compiled with clang
 ifneq ($(LLVM),)
@@ -471,7 +471,8 @@ TRUNNER_TESTS_DIR := prog_tests
 TRUNNER_BPF_PROGS_DIR := progs
 TRUNNER_EXTRA_SOURCES := test_progs.c cgroup_helpers.c trace_helpers.c	\
 			 network_helpers.c testing_helpers.c		\
-			 btf_helpers.c	flow_dissector_load.h
+			 btf_helpers.c flow_dissector_load.h		\
+			 cap_helpers.c
 TRUNNER_EXTRA_FILES := $(OUTPUT)/urandom_read $(OUTPUT)/bpf_testmod.ko	\
 		       ima_setup.sh					\
 		       $(wildcard progs/btf_dump_test_case_*.c)
