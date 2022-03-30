@@ -8,6 +8,16 @@
 
 #include "core.h"
 
+static void en25qh256_post_sfdp_fixups(struct spi_nor *nor)
+{
+	if (nor->params->hwcaps.mask & SNOR_HWCAPS_READ_1_1_4)
+		nor->flags |= SNOR_F_4B_OPCODES;
+}
+
+static const struct spi_nor_fixups en25qh256_fixups = {
+	.post_sfdp = en25qh256_post_sfdp_fixups,
+};
+
 static const struct flash_info eon_parts[] = {
 	/* EON -- en25xxx */
 	{ "en25f32",    INFO(0x1c3116, 0, 64 * 1024,   64, SECT_4K) },
@@ -23,7 +33,9 @@ static const struct flash_info eon_parts[] = {
 	{ "en25qh64",   INFO(0x1c7017, 0, 64 * 1024,  128,
 			     SECT_4K | SPI_NOR_DUAL_READ) },
 	{ "en25qh128",  INFO(0x1c7018, 0, 64 * 1024,  256, 0) },
-	{ "en25qh256",  INFO(0x1c7019, 0, 64 * 1024,  512, 0) },
+	{ "en25qh256",  INFO(0x1c7019, 0, 64 * 1024,  512,
+		SPI_NOR_DUAL_READ)
+		.fixups = &en25qh256_fixups },
 	{ "en25s64",	INFO(0x1c3817, 0, 64 * 1024,  128, SECT_4K) },
 };
 
