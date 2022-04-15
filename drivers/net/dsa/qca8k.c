@@ -2494,7 +2494,7 @@ qca8k_port_enable(struct dsa_switch *ds, int port,
 	struct qca8k_priv *priv = (struct qca8k_priv *)ds->priv;
 
 	qca8k_port_set_status(priv, port, 1);
-	priv->port_sts[port].enabled = 1;
+	priv->port_enabled_map |= BIT(port);
 
 	if (dsa_is_user_port(ds, port))
 		phy_support_asym_pause(phy);
@@ -2508,7 +2508,7 @@ qca8k_port_disable(struct dsa_switch *ds, int port)
 	struct qca8k_priv *priv = (struct qca8k_priv *)ds->priv;
 
 	qca8k_port_set_status(priv, port, 0);
-	priv->port_sts[port].enabled = 0;
+	priv->port_enabled_map &= ~BIT(port);
 }
 
 static int
@@ -2531,19 +2531,19 @@ qca8k_port_change_mtu(struct dsa_switch *ds, int port, int new_mtu)
 	 * Turn off both cpu ports before applying the new value to prevent
 	 * this.
 	 */
-	if (priv->port_sts[0].enabled)
+	if (priv->port_enabled_map & BIT(0))
 		qca8k_port_set_status(priv, 0, 0);
 
-	if (priv->port_sts[6].enabled)
+	if (priv->port_enabled_map & BIT(6))
 		qca8k_port_set_status(priv, 6, 0);
 
 	/* Include L2 header / FCS length */
 	ret = qca8k_write(priv, QCA8K_MAX_FRAME_SIZE, new_mtu + ETH_HLEN + ETH_FCS_LEN);
 
-	if (priv->port_sts[0].enabled)
+	if (priv->port_enabled_map & BIT(0))
 		qca8k_port_set_status(priv, 0, 1);
 
-	if (priv->port_sts[6].enabled)
+	if (priv->port_enabled_map & BIT(6))
 		qca8k_port_set_status(priv, 6, 1);
 
 	return ret;
@@ -3199,13 +3199,16 @@ static void qca8k_sw_shutdown(struct mdio_device *mdiodev)
 static void
 qca8k_set_pm(struct qca8k_priv *priv, int enable)
 {
-	int i;
+	int port;
 
-	for (i = 0; i < QCA8K_NUM_PORTS; i++) {
-		if (!priv->port_sts[i].enabled)
+	for (port = 0; port < QCA8K_NUM_PORTS; port++) {
+		/* Do not enable on resume if the port was
+		 * disabled before.
+		 */
+		if (!(priv->port_enabled_map & BIT(port)))
 			continue;
 
-		qca8k_port_set_status(priv, i, enable);
+		qca8k_port_set_status(priv, port, enable);
 	}
 }
 
