@@ -759,6 +759,18 @@ static void phylink_resolve_flow(struct phylink_link_state *state)
 	}
 }
 
+static void phylink_pcs_poll_stop(struct phylink *pl)
+{
+	if (pl->cfg_link_an_mode == MLO_AN_INBAND)
+		del_timer(&pl->link_poll);
+}
+
+static void phylink_pcs_poll_start(struct phylink *pl)
+{
+	if (pl->pcs->poll && pl->cfg_link_an_mode == MLO_AN_INBAND)
+		mod_timer(&pl->link_poll, jiffies + HZ);
+}
+
 static void phylink_mac_config(struct phylink *pl,
 			       const struct phylink_link_state *state)
 {
@@ -790,6 +802,7 @@ static void phylink_major_config(struct phylink *pl, bool restart,
 				  const struct phylink_link_state *state)
 {
 	struct phylink_pcs *pcs = NULL;
+	bool pcs_changed = false;
 	int err;
 
 	phylink_dbg(pl, "major config %s\n", phy_modes(state->interface));
@@ -802,7 +815,11 @@ static void phylink_major_config(struct phylink *pl, bool restart,
 				    pcs);
 			return;
 		}
+
+		pcs_changed = pcs && pl->pcs != pcs;
 	}
+
+	phylink_pcs_poll_stop(pl);
 
 	if (pl->mac_ops->mac_prepare) {
 		err = pl->mac_ops->mac_prepare(pl->config, pl->cur_link_an_mode,
@@ -817,8 +834,10 @@ static void phylink_major_config(struct phylink *pl, bool restart,
 	/* If we have a new PCS, switch to the new PCS after preparing the MAC
 	 * for the change.
 	 */
-	if (pcs)
-		phylink_set_pcs(pl, pcs);
+	if (pcs_changed) {
+		pl->pcs = pcs;
+		pl->pcs_ops = pcs->ops;
+	}
 
 	phylink_mac_config(pl, state);
 
@@ -844,6 +863,8 @@ static void phylink_major_config(struct phylink *pl, bool restart,
 			phylink_err(pl, "mac_finish failed: %pe\n",
 				    ERR_PTR(err));
 	}
+
+	phylink_pcs_poll_start(pl);
 }
 
 /*
