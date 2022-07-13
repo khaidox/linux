@@ -427,6 +427,9 @@ int ubiblock_create(struct ubi_volume_info *vi)
 		goto out_cleanup_disk;
 	}
 	gd->private_data = dev;
+#ifdef CONFIG_FIT_PARTITION
+	gd->flags |= GENHD_FL_EXT_DEVT;
+#endif
 	sprintf(gd->disk_name, "ubiblock%d_%d", dev->ubi_num, dev->vol_id);
 	set_capacity(gd, disk_capacity);
 	dev->gd = gd;
