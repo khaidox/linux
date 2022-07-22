@@ -16,6 +16,7 @@ config NET_MEDIATEK_SOC
 	depends on NET_DSA || !NET_DSA
 	select PHYLINK
 	select DIMLIB
+	select PAGE_POOL
 	help
 	  This driver supports the gigabit ethernet MACs in the
 	  MediaTek SoC family.
