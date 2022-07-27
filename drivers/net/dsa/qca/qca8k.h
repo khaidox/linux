@@ -393,6 +393,7 @@ struct qca8k_priv {
 	struct qca8k_mgmt_eth_data mgmt_eth_data;
 	struct qca8k_mib_eth_data mib_eth_data;
 	struct qca8k_mdio_cache mdio_cache;
+	const struct qca8k_match_data *info;
 };
 
 struct qca8k_mib_desc {
