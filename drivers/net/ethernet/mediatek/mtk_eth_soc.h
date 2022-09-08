@@ -1112,7 +1112,7 @@ struct mtk_eth {
 
 	int				ip_align;
 
-	struct mtk_ppe			*ppe;
+	struct mtk_ppe			*ppe[2];
 	struct rhashtable		flow_table;
 
 	struct bpf_prog			__rcu *prog;

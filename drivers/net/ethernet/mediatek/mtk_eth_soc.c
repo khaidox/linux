@@ -1871,7 +1871,7 @@ static int mtk_poll_rx(struct napi_struct *napi, int budget,
 
 		reason = FIELD_GET(MTK_RXD4_PPE_CPU_REASON, trxd.rxd4);
 		if (reason == MTK_PPE_CPU_REASON_HIT_UNBIND_RATE_REACHED)
-			mtk_ppe_check_skb(eth->ppe, skb, hash);
+			mtk_ppe_check_skb(eth->ppe[0], skb, hash);
 
 		if (netdev->features & NETIF_F_HW_VLAN_CTAG_RX) {
 			if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2)) {
@@ -2932,7 +2932,8 @@ static int mtk_open(struct net_device *dev)
 	/* we run 2 netdevs on the same dma ring so we only bring it up once */
 	if (!refcount_read(&eth->dma_refcnt)) {
 		const struct mtk_soc_data *soc = eth->soc;
-		u32 gdm_config = MTK_GDMA_TO_PDMA;
+		u32 gdm_config;
+		int i;
 		int err;
 
 		err = mtk_start_dma(eth);
@@ -2941,8 +2942,11 @@ static int mtk_open(struct net_device *dev)
 			return err;
 		}
 
-		if (soc->offload_version && mtk_ppe_start(eth->ppe) == 0)
-			gdm_config = soc->reg_map->gdma_to_ppe0;
+		for (i = 0; i < ARRAY_SIZE(eth->ppe); i++)
+			mtk_ppe_start(eth->ppe[i]);
+
+		gdm_config = soc->offload_version ? soc->reg_map->gdma_to_ppe0
+			: MTK_GDMA_TO_PDMA;
 
 		mtk_gdm_config(eth, gdm_config);
 
@@ -2987,6 +2991,7 @@ static int mtk_stop(struct net_device *dev)
 {
 	struct mtk_mac *mac = netdev_priv(dev);
 	struct mtk_eth *eth = mac->hw;
+	int i;
 
 	phylink_stop(mac->phylink);
 
@@ -3014,8 +3019,8 @@ static int mtk_stop(struct net_device *dev)
 
 	mtk_dma_free(eth);
 
-	if (eth->soc->offload_version)
-		mtk_ppe_stop(eth->ppe);
+	for (i = 0; i < ARRAY_SIZE(eth->ppe); i++)
+		mtk_ppe_stop(eth->ppe[i]);
 
 	return 0;
 }
@@ -4048,12 +4053,19 @@ static int mtk_probe(struct platform_device *pdev)
 	}
 
 	if (eth->soc->offload_version) {
-		u32 ppe_addr = eth->soc->reg_map->ppe_base;
+		u32 num_ppe;
 
-		eth->ppe = mtk_ppe_init(eth, eth->base + ppe_addr, 2);
-		if (!eth->ppe) {
-			err = -ENOMEM;
-			goto err_free_dev;
+		num_ppe = MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2) ? 2 : 1;
+		num_ppe = min_t(u32, ARRAY_SIZE(eth->ppe), num_ppe);
+		for (i = 0; i < num_ppe; i++) {
+			u32 ppe_addr = eth->soc->reg_map->ppe_base + i * 0x400;
+
+			eth->ppe[i] = mtk_ppe_init(eth, eth->base + ppe_addr,
+						   eth->soc->offload_version, i);
+			if (!eth->ppe[i]) {
+				err = -ENOMEM;
+				goto err_free_dev;
+			}
 		}
 
 		err = mtk_eth_offload_init(eth);
