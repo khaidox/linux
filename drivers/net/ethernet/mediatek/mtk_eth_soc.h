@@ -22,6 +22,9 @@
 #include <linux/bpf_trace.h>
 #include "mtk_ppe.h"
 
+#define MTK_MAX_DSA_PORTS	7
+#define MTK_DSA_PORT_MASK	GENMASK(2, 0)
+
 #define MTK_QDMA_NUM_QUEUES	16
 #define MTK_QDMA_PAGE_SIZE	2048
 #define MTK_MAX_RX_LENGTH	1536
@@ -104,6 +107,9 @@
 /* CDMP Ingress Control Register */
 #define MTK_CDMQ_IG_CTRL	0x1400
 #define MTK_CDMQ_STAG_EN	BIT(0)
+
+/* CDMQ Exgress Control Register */
+#define MTK_CDMQ_EG_CTRL	0x1404
 
 /* CDMP Ingress Control Register */
 #define MTK_CDMP_IG_CTRL	0x400
@@ -1159,6 +1165,8 @@ struct mtk_eth {
 	struct dim			tx_dim;
 
 	int				ip_align;
+
+	struct metadata_dst		*dsa_meta[MTK_MAX_DSA_PORTS];
 
 	struct mtk_ppe			*ppe[2];
 	struct rhashtable		flow_table;
