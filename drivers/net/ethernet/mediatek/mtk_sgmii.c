@@ -87,6 +87,11 @@ static int mtk_pcs_config(struct phylink_pcs *pcs, unsigned int mode,
 		regmap_update_bits(mpcs->regmap, SGMSYS_QPHY_PWR_STATE_CTRL,
 				   SGMII_PHYA_PWD, SGMII_PHYA_PWD);
 
+		if (mpcs->flags & MTK_SGMII_FLAG_PN_SWAP)
+			regmap_update_bits(mpcs->regmap, SGMSYS_QPHY_WRAP_CTRL,
+					   SGMII_PN_SWAP_MASK,
+					   SGMII_PN_SWAP_TX_RX);
+
 		/* Reset SGMII PCS state */
 		regmap_update_bits(mpcs->regmap, SGMII_RESERVED_0,
 				   SGMII_SW_RESET, SGMII_SW_RESET);
@@ -186,6 +191,11 @@ int mtk_sgmii_init(struct mtk_sgmii *ss, struct device_node *r, u32 ana_rgc3)
 
 		ss->pcs[i].ana_rgc3 = ana_rgc3;
 		ss->pcs[i].regmap = syscon_node_to_regmap(np);
+
+		ss->pcs[i].flags = 0;
+		if (of_property_read_bool(np, "mediatek,pnswap"))
+			ss->pcs[i].flags |= MTK_SGMII_FLAG_PN_SWAP;
+
 		of_node_put(np);
 		if (IS_ERR(ss->pcs[i].regmap))
 			return PTR_ERR(ss->pcs[i].regmap);
