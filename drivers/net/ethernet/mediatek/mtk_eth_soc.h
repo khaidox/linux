@@ -817,7 +817,6 @@ enum mkt_eth_capabilities {
 	MTK_SHARED_INT_BIT,
 	MTK_TRGMII_MT7621_CLK_BIT,
 	MTK_QDMA_BIT,
-	MTK_NETSYS_V2_BIT,
 	MTK_SOC_MT7628_BIT,
 	MTK_RSTCTRL_PPE1_BIT,
 	MTK_U3_COPHY_V2_BIT,
@@ -852,7 +851,6 @@ enum mkt_eth_capabilities {
 #define MTK_SHARED_INT		BIT(MTK_SHARED_INT_BIT)
 #define MTK_TRGMII_MT7621_CLK	BIT(MTK_TRGMII_MT7621_CLK_BIT)
 #define MTK_QDMA		BIT(MTK_QDMA_BIT)
-#define MTK_NETSYS_V2		BIT(MTK_NETSYS_V2_BIT)
 #define MTK_SOC_MT7628		BIT(MTK_SOC_MT7628_BIT)
 #define MTK_RSTCTRL_PPE1	BIT(MTK_RSTCTRL_PPE1_BIT)
 #define MTK_U3_COPHY_V2		BIT(MTK_U3_COPHY_V2_BIT)
@@ -931,11 +929,11 @@ enum mkt_eth_capabilities {
 #define MT7981_CAPS  (MTK_GMAC1_SGMII | MTK_GMAC2_SGMII | MTK_GMAC2_GEPHY | \
 		      MTK_MUX_GMAC12_TO_GEPHY_SGMII | MTK_QDMA | \
 		      MTK_MUX_U3_GMAC2_TO_QPHY | MTK_U3_COPHY_V2 | \
-		      MTK_NETSYS_V2 | MTK_RSTCTRL_PPE1)
+		      MTK_RSTCTRL_PPE1)
 
 #define MT7986_CAPS  (MTK_GMAC1_SGMII | MTK_GMAC2_SGMII | \
 		      MTK_MUX_GMAC12_TO_GEPHY_SGMII | MTK_QDMA | \
-		      MTK_NETSYS_V2 | MTK_RSTCTRL_PPE1)
+		      MTK_RSTCTRL_PPE1)
 
 struct mtk_tx_dma_desc_info {
 	dma_addr_t	addr;
@@ -1006,6 +1004,7 @@ struct mtk_reg_map {
  * @required_pctl		A bool value to show whether the SoC requires
  *				the extra setup for those pins used by GMAC.
  * @hash_offset			Flow table hash offset.
+ * @version			SoC version.
  * @foe_entry_size		Foe table entry size.
  * @has_accounting		Bool indicating support for accounting of
  *				offloaded flows.
@@ -1024,6 +1023,7 @@ struct mtk_soc_data {
 	bool		required_pctl;
 	u8		offload_version;
 	u8		hash_offset;
+	u8		version;
 	u16		foe_entry_size;
 	netdev_features_t hw_features;
 	bool		has_accounting;
@@ -1180,6 +1180,16 @@ struct mtk_mac {
 /* the struct describing the SoC. these are declared in the soc_xyz.c files */
 extern const struct of_device_id of_mtk_match[];
 
+static inline bool mtk_is_netsys_v1(struct mtk_eth *eth)
+{
+	return eth->soc->version == 1;
+}
+
+static inline bool mtk_is_netsys_v2_or_greater(struct mtk_eth *eth)
+{
+	return eth->soc->version > 1;
+}
+
 static inline struct mtk_foe_entry *
 mtk_foe_get_entry(struct mtk_ppe *ppe, u16 hash)
 {
@@ -1190,7 +1200,7 @@ mtk_foe_get_entry(struct mtk_ppe *ppe, u16 hash)
 
 static inline u32 mtk_get_ib1_ts_mask(struct mtk_eth *eth)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return MTK_FOE_IB1_BIND_TIMESTAMP_V2;
 
 	return MTK_FOE_IB1_BIND_TIMESTAMP;
@@ -1198,7 +1208,7 @@ static inline u32 mtk_get_ib1_ts_mask(struct mtk_eth *eth)
 
 static inline u32 mtk_get_ib1_ppoe_mask(struct mtk_eth *eth)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return MTK_FOE_IB1_BIND_PPPOE_V2;
 
 	return MTK_FOE_IB1_BIND_PPPOE;
@@ -1206,7 +1216,7 @@ static inline u32 mtk_get_ib1_ppoe_mask(struct mtk_eth *eth)
 
 static inline u32 mtk_get_ib1_vlan_tag_mask(struct mtk_eth *eth)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return MTK_FOE_IB1_BIND_VLAN_TAG_V2;
 
 	return MTK_FOE_IB1_BIND_VLAN_TAG;
@@ -1214,7 +1224,7 @@ static inline u32 mtk_get_ib1_vlan_tag_mask(struct mtk_eth *eth)
 
 static inline u32 mtk_get_ib1_vlan_layer_mask(struct mtk_eth *eth)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return MTK_FOE_IB1_BIND_VLAN_LAYER_V2;
 
 	return MTK_FOE_IB1_BIND_VLAN_LAYER;
@@ -1222,7 +1232,7 @@ static inline u32 mtk_get_ib1_vlan_layer_mask(struct mtk_eth *eth)
 
 static inline u32 mtk_prep_ib1_vlan_layer(struct mtk_eth *eth, u32 val)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return FIELD_PREP(MTK_FOE_IB1_BIND_VLAN_LAYER_V2, val);
 
 	return FIELD_PREP(MTK_FOE_IB1_BIND_VLAN_LAYER, val);
@@ -1230,7 +1240,7 @@ static inline u32 mtk_prep_ib1_vlan_layer(struct mtk_eth *eth, u32 val)
 
 static inline u32 mtk_get_ib1_vlan_layer(struct mtk_eth *eth, u32 val)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return FIELD_GET(MTK_FOE_IB1_BIND_VLAN_LAYER_V2, val);
 
 	return FIELD_GET(MTK_FOE_IB1_BIND_VLAN_LAYER, val);
@@ -1238,7 +1248,7 @@ static inline u32 mtk_get_ib1_vlan_layer(struct mtk_eth *eth, u32 val)
 
 static inline u32 mtk_get_ib1_pkt_type_mask(struct mtk_eth *eth)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return MTK_FOE_IB1_PACKET_TYPE_V2;
 
 	return MTK_FOE_IB1_PACKET_TYPE;
@@ -1246,7 +1256,7 @@ static inline u32 mtk_get_ib1_pkt_type_mask(struct mtk_eth *eth)
 
 static inline u32 mtk_get_ib1_pkt_type(struct mtk_eth *eth, u32 val)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return FIELD_GET(MTK_FOE_IB1_PACKET_TYPE_V2, val);
 
 	return FIELD_GET(MTK_FOE_IB1_PACKET_TYPE, val);
@@ -1254,7 +1264,7 @@ static inline u32 mtk_get_ib1_pkt_type(struct mtk_eth *eth, u32 val)
 
 static inline u32 mtk_get_ib2_multicast_mask(struct mtk_eth *eth)
 {
-	if (MTK_HAS_CAPS(eth->soc->caps, MTK_NETSYS_V2))
+	if (mtk_is_netsys_v2_or_greater(eth))
 		return MTK_FOE_IB2_MULTICAST_V2;
 
 	return MTK_FOE_IB2_MULTICAST;
