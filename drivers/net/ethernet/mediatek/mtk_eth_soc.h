@@ -1129,7 +1129,7 @@ struct mtk_reg_map {
 	u32	gdm1_cnt;
 	u32	gdma_to_ppe0;
 	u32	ppe_base;
-	u32	wdma_base[2];
+	u32	wdma_base[3];
 	u32	pse_iq_sta;
 	u32	pse_oq_sta;
 };
