@@ -368,6 +368,13 @@ static const struct sfp_quirk sfp_quirks[] = {
 		.modes = sfp_quirk_2500basex,
 		.fixup = sfp_fixup_long_startup,
 	}, {
+		// Fiberstore GPON-ONU-34-20BI can operate at 2500base-X, but report 1.2GBd
+		// NRZ in their EEPROM
+		.vendor = "FS",
+		.part = "GPON-ONU-34-20BI",
+		.modes = sfp_quirk_2500basex,
+		.fixup = sfp_fixup_ignore_tx_fault,
+	}, {
 		.vendor = "HALNy",
 		.part = "HL-GSFP",
 		.fixup = sfp_fixup_halny_gsfp,
