@@ -2,3 +2,4 @@
 *.h   diff=cpp
 *.dtsi diff=dts
 *.dts  diff=dts
+khaid_tool/openwrt-toolchain-23.05.0-malta-be_gcc-12.3.0_musl.Linux-x86_64.tar.xz filter=lfs diff=lfs merge=lfs -text
