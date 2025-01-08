@@ -2,683 +2,740 @@
 
 open_wrt="/sw/study/tplink/project2/openwrt"
 
-git am $open_wrt/target/linux/generic/backport-5.15/005-v5.17-01-Kbuild-use-Wdeclaration-after-statement.patch
-git am $open_wrt/target/linux/generic/backport-5.15/005-v5.17-02-Kbuild-move-to-std-gnu11.patch
-git am $open_wrt/target/linux/generic/backport-5.15/005-v5.17-03-Kbuild-use-std-gnu11-for-KBUILD_USERCFLAGS.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-01-mm-x86-arm64-add-arch_has_hw_pte_young.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-02-mm-x86-add-CONFIG_ARCH_HAS_NONLEAF_PMD_YOUNG.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-03-mm-vmscan.c-refactor-shrink_node.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-04-Revert-include-linux-mm_inline.h-fold-__update_lru_s.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-05-mm-multi-gen-LRU-groundwork.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-06-mm-multi-gen-LRU-minimal-implementation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-07-mm-multi-gen-LRU-exploit-locality-in-rmap.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-08-mm-multi-gen-LRU-support-page-table-walks.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-09-mm-multi-gen-LRU-optimize-multiple-memcgs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-10-mm-multi-gen-LRU-kill-switch.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-11-mm-multi-gen-LRU-thrashing-prevention.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-12-mm-multi-gen-LRU-debugfs-interface.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-13-mm-mglru-don-t-sync-disk-for-each-aging-cycle.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-14-mm-multi-gen-LRU-retry-pages-written-back-while-isol.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-15-mm-multi-gen-LRU-move-lru_gen_add_mm-out-of-IRQ-off-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-17-mm-add-dummy-pmd_young-for-architectures-not-having-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-18-mm-introduce-arch_has_hw_nonleaf_pmd_young.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.2-16-mm-multi-gen-LRU-fix-crash-during-cgroup-migration.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-19-mm-add-vma_has_recency.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-20-mm-support-POSIX_FADV_NOREUSE.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-21-mm-multi-gen-LRU-rename-lru_gen_struct-to-lru_gen_pa.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-22-mm-multi-gen-LRU-rename-lrugen-lists-to-lrugen-pages.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-23-mm-multi-gen-LRU-remove-eviction-fairness-safeguard.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-24-mm-multi-gen-LRU-remove-aging-fairness-safeguard.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-25-mm-multi-gen-LRU-shuffle-should_run_aging.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-26-mm-multi-gen-LRU-per-node-lru_gen_page-lists.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-27-mm-multi-gen-LRU-clarify-scan_control-flags.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-28-mm-multi-gen-LRU-simplify-arch_has_hw_pte_young-chec.patch
-git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-29-mm-multi-gen-LRU-avoid-futile-retries.patch
-git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-00-MIPS-uasm-Enable-muhu-opcode-for-MIPS-R6.patch
-git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-01-mips-uasm-Add-workaround-for-Loongson-2F-nop-CPU-err.patch
-git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-02-mips-bpf-Add-eBPF-JIT-for-32-bit-MIPS.patch
-git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-03-mips-bpf-Add-new-eBPF-JIT-for-64-bit-MIPS.patch
-git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-04-mips-bpf-Add-JIT-workarounds-for-CPU-errata.patch
-git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-05-mips-bpf-Enable-eBPF-JITs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-06-mips-bpf-Remove-old-BPF-JIT-implementations.patch
-git am $open_wrt/target/linux/generic/backport-5.15/060-v5.18-01-bpf-selftests-Add-helpers-to-directly-use-the-capget.patch
-git am $open_wrt/target/linux/generic/backport-5.15/060-v5.18-02-bpf-selftests-Remove-libcap-usage-from-test_verifier.patch
-git am $open_wrt/target/linux/generic/backport-5.15/060-v5.18-03-bpf-selftests-Remove-libcap-usage-from-test_progs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/080-v5.17-clk-gate-Add-devm_clk_hw_register_gate.patch
-git am $open_wrt/target/linux/generic/backport-5.15/100-v5.18-tty-serial-bcm63xx-use-more-precise-Kconfig-symbol.patch
-git am $open_wrt/target/linux/generic/backport-5.15/200-v5.18-tools-resolve_btfids-Build-with-host-flags.patch
-git am $open_wrt/target/linux/generic/backport-5.15/201-v5.16-scripts-dtc-Update-to-upstream-version-v1.6.1-19-g0a.patch
-git am $open_wrt/target/linux/generic/backport-5.15/300-v5.18-pinctrl-qcom-Return--EINVAL-for-setting-affinity-if-no-IRQ-parent.patch
-git am $open_wrt/target/linux/generic/backport-5.15/301-v5.16-soc-qcom-smem-Support-reserved-memory-description.patch
-git am $open_wrt/target/linux/generic/backport-5.15/302-v5.16-watchdog-bcm63xx_wdt-fix-fallthrough-warning.patch
-git am $open_wrt/target/linux/generic/backport-5.15/330-v5.16-01-MIPS-kernel-proc-add-CPU-option-reporting.patch
-git am $open_wrt/target/linux/generic/backport-5.15/330-v5.16-02-MIPS-Fix-using-smp_processor_id-in-preemptible-in-sh.patch
-git am $open_wrt/target/linux/generic/backport-5.15/331-v5.19-mtd-spinand-Add-support-for-XTX-XT26G0xA.patch
-git am $open_wrt/target/linux/generic/backport-5.15/344-v5.18-01-phy-marvell-phy-mvebu-a3700-comphy-Remove-port-from-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/344-v5.18-02-phy-marvell-phy-mvebu-a3700-comphy-Add-native-kernel.patch
-git am $open_wrt/target/linux/generic/backport-5.15/345-v5.17-arm64-dts-marvell-armada-37xx-Add-xtal-clock-to-comp.patch
-git am $open_wrt/target/linux/generic/backport-5.15/346-v5.18-01-Revert-ata-ahci-mvebu-Make-SATA-PHY-optional-for-Arm.patch
-git am $open_wrt/target/linux/generic/backport-5.15/346-v5.18-02-Revert-usb-host-xhci-mvebu-make-USB-3.0-PHY-optional.patch
-git am $open_wrt/target/linux/generic/backport-5.15/346-v5.18-03-Revert-PCI-aardvark-Fix-initialization-with-old-Marv.patch
-git am $open_wrt/target/linux/generic/backport-5.15/347-v6.0-phy-marvell-phy-mvebu-a3700-comphy-Remove-broken-res.patch
-git am $open_wrt/target/linux/generic/backport-5.15/350-v5.18-regmap-add-configurable-downshift-for-addresses.patch
-git am $open_wrt/target/linux/generic/backport-5.15/351-v5.18-regmap-allow-a-defined-reg_base-to-be-added-to-every.patch
-git am $open_wrt/target/linux/generic/backport-5.15/352-v6.3-regmap-apply-reg_base-and-reg_downshift-for-single-r.patch
-git am $open_wrt/target/linux/generic/backport-5.15/400-v5.19-mtd-call-of_platform_populate-for-MTD-partitions.patch
-git am $open_wrt/target/linux/generic/backport-5.15/401-v6.0-mtd-parsers-add-support-for-Sercomm-partitions.patch
-git am $open_wrt/target/linux/generic/backport-5.15/402-v6.0-mtd-next-mtd-core-introduce-of-support-for-dynamic-partitions.patch
-git am $open_wrt/target/linux/generic/backport-5.15/403-v6.1-mtd-allow-getting-MTD-device-associated-with-a-speci.patch
-git am $open_wrt/target/linux/generic/backport-5.15/404-v6.0-mtd-core-check-partition-before-dereference.patch
-git am $open_wrt/target/linux/generic/backport-5.15/405-v6.1-mtd-core-add-missing-of_node_get-in-dynamic-partitio.patch
-git am $open_wrt/target/linux/generic/backport-5.15/406-v6.2-0001-mtd-core-simplify-a-bit-code-find-partition-matching.patch
-git am $open_wrt/target/linux/generic/backport-5.15/406-v6.2-0002-mtd-core-try-to-find-OF-node-for-every-MTD-partition.patch
-git am $open_wrt/target/linux/generic/backport-5.15/407-v5.17-mtd-parsers-qcom-Don-t-print-error-message-on-EPROBE.patch
-git am $open_wrt/target/linux/generic/backport-5.15/408-v6.2-mtd-core-set-ROOT_DEV-for-partitions-marked-as-rootf.patch
-git am $open_wrt/target/linux/generic/backport-5.15/410-v5.18-mtd-parsers-trx-allow-to-use-on-MediaTek-MIPS-SoCs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-02-mtd-spinand-gigadevice-add-support-for-GD5FxGQ4xExxG.patch
-git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-03-mtd-spinand-gigadevice-add-support-for-GD5F1GQ5RExxG.patch
-git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-04-mtd-spinand-gigadevice-add-support-for-GD5F-2-4-GQ5x.patch
-git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-05-mtd-spinand-gigadevice-add-support-for-GD5FxGM7xExxG.patch
-git am $open_wrt/target/linux/generic/backport-5.15/421-v6.2-mtd-parsers-add-TP-Link-SafeLoader-partitions-table-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/422-v5.19-mtd-spi-nor-support-eon-en25qh256a.patch
-git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0001-mtd-track-maximum-number-of-bitflips-for-each-read-r.patch
-git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0002-mtd-always-initialize-stats-in-struct-mtd_oob_ops.patch
-git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0003-mtd-add-ECC-error-accounting-for-each-read-request.patch
-git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0004-mtdchar-add-MEMREAD-ioctl.patch
-git am $open_wrt/target/linux/generic/backport-5.15/423-v6.3-mtd-spinand-macronix-use-scratch-buffer-for-DMA-oper.patch
-git am $open_wrt/target/linux/generic/backport-5.15/424-v6.4-0004-mtd-core-prepare-mtd_otp_nvmem_add-to-handle-EPROBE_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/600-v5.18-page_pool-Add-allocation-stats.patch
-git am $open_wrt/target/linux/generic/backport-5.15/601-v5.18-page_pool-Add-recycle-stats.patch
-git am $open_wrt/target/linux/generic/backport-5.15/602-v5.18-page_pool-Add-function-to-batch-and-return-stats.patch
-git am $open_wrt/target/linux/generic/backport-5.15/603-v5.19-page_pool-Add-recycle-stats-to-page_pool_put_page_bu.patch
-git am $open_wrt/target/linux/generic/backport-5.15/604-v5.19-net-page_pool-introduce-ethtool-stats.patch
-git am $open_wrt/target/linux/generic/backport-5.15/605-v5.18-xdp-introduce-flags-field-in-xdp_buff-xdp_frame.patch
-git am $open_wrt/target/linux/generic/backport-5.15/606-v5.18-xdp-add-frags-support-to-xdp_return_-buff-frame.patch
-git am $open_wrt/target/linux/generic/backport-5.15/607-v5.18-net-skbuff-add-size-metadata-to-skb_shared_info-for-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/608-v5.18-net-veth-Account-total-xdp_frame-len-running-ndo_xdp.patch
-git am $open_wrt/target/linux/generic/backport-5.15/609-v5.18-veth-Allow-jumbo-frames-in-xdp-mode.patch
-git am $open_wrt/target/linux/generic/backport-5.15/611-v6.3-net-add-helper-eth_addr_add.patch
-git am $open_wrt/target/linux/generic/backport-5.15/700-v5.17-net-dsa-introduce-tagger-owned-storage-for-private.patch
-git am $open_wrt/target/linux/generic/backport-5.15/701-v5.17-dsa-make-tagging-protocols-connect-to-individual-switches.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-00-net-ethernet-mtk_eth_soc-add-support-for-coherent-DM.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-02-net-ethernet-mtk_eth_soc-add-support-for-Wireless-Et.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-03-net-ethernet-mtk_eth_soc-implement-flow-offloading-t.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-05-net-ethernet-mtk_eth_soc-add-ipv6-flow-offload-suppo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-06-net-ethernet-mtk_eth_soc-support-TC_SETUP_BLOCK-for-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-07-net-ethernet-mtk_eth_soc-allocate-struct-mtk_ppe-sep.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-08-net-ethernet-mtk_eth_soc-rework-hardware-flow-table-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-09-net-ethernet-mtk_eth_soc-remove-bridge-flow-offload-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-10-net-ethernet-mtk_eth_soc-support-creating-mac-addres.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-11-net-ethernet-mtk_eth_soc-wed-fix-sparse-endian-warni.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-12-net-ethernet-mtk_eth_soc-fix-return-value-check-in-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-13-net-ethernet-mtk_eth_soc-use-standard-property-for-c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-14-net-ethernet-mtk_eth_soc-use-after-free-in-__mtk_ppe.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-15-net-ethernet-mtk_eth_soc-add-check-for-allocation-fa.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-16-eth-mtk_eth_soc-silence-the-GCC-12-array-bounds-warn.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-17-net-ethernet-mtk_eth_soc-rely-on-GFP_KERNEL-for-dma_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-18-net-ethernet-mtk_eth_soc-move-tx-dma-desc-configurat.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-19-net-ethernet-mtk_eth_soc-add-txd_size-to-mtk_soc_dat.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-20-net-ethernet-mtk_eth_soc-rely-on-txd_size-in-mtk_tx_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-21-net-ethernet-mtk_eth_soc-rely-on-txd_size-in-mtk_des.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-22-net-ethernet-mtk_eth_soc-rely-on-txd_size-in-txd_to_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-23-net-ethernet-mtk_eth_soc-add-rxd_size-to-mtk_soc_dat.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-24-net-ethernet-mtk_eth_soc-rely-on-txd_size-field-in-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-25-net-ethernet-mtk_eth_soc-rely-on-rxd_size-field-in-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-26-net-ethernet-mtk_eth_soc-introduce-device-register-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-27-net-ethernet-mtk_eth_soc-introduce-MTK_NETSYS_V2-sup.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-28-net-ethernet-mtk_eth_soc-convert-ring-dma-pointer-to.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-29-net-ethernet-mtk_eth_soc-convert-scratch_ring-pointe.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-30-net-ethernet-mtk_eth_soc-introduce-support-for-mt798.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-31-net-ethernet-mtk_eth_soc-fix-error-code-in-mtk_flow_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-33-net-ethernet-mtk_eth_soc-enable-rx-cksum-offload-for.patch
-git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-34-eth-mtk_ppe-fix-up-after-merge.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-00-v5.16-net-convert-users-of-bitmap_foo-to-linkmode_foo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-01-v5.16-net-phylink-add-MAC-phy_interface_t-bitmap.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-02-v5.16-net-phylink-use-supported_interfaces-for-phylink-val.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-03-v5.16-net-dsa-populate-supported_interfaces-member.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-04-v5.17-net-dsa-consolidate-phylink-creation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-05-v5.17-net-dsa-replace-phylink_get_interfaces-with-phylink_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-06-v5.18-net-dsa-add-support-for-phylink-mac_select_pcs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-07-v5.16-net-phy-add-phy_interface_t-bitmap-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-08-v5.17-net-phylink-add-mac_select_pcs-method-to-phylink_mac.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-09-v5.17-net-phylink-add-generic-validate-implementation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-11-v5.17-net-phylink-add-pcs_validate-method.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-12-v5.17-net-phylink-add-legacy_pre_march2020-indicator.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-13-v5.17-net-dsa-mark-DSA-phylink-as-legacy_pre_march2020.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-14-v5.17-net-phylink-use-legacy_pre_march2020.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-15-v5.18-net-phy-phylink-fix-DSA-mac_select_pcs-introduction.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-16-v5.16-net-mvneta-populate-supported_interfaces-member.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-17-v5.16-net-mvneta-remove-interface-checks-in-mvneta_validat.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-18-v5.16-net-mvneta-drop-use-of-phylink_helper_basex_speed.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-19-v5.17-net-mvneta-use-phylink_generic_validate.patch
-git am $open_wrt/target/linux/generic/backport-5.15/703-20-v5.17-net-mvneta-mark-as-a-legacy_pre_march2020-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-01-v5.17-net-mtk_eth_soc-populate-supported_interfaces-member.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-02-v5.17-net-mtk_eth_soc-remove-interface-checks-in-mtk_valid.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-03-v5.17-net-mtk_eth_soc-drop-use-of-phylink_helper_basex_spe.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-04-v5.17-net-mtk_eth_soc-use-phylink_generic_validate.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-05-v5.17-net-mtk_eth_soc-mark-as-a-legacy_pre_march2020-drive.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-06-v5.19-eth-mtk_eth_soc-remove-a-copy-of-the-NAPI_POLL_WEIGH.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-07-v5.19-mtk_eth_soc-remove-unused-mac-mode.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-08-v5.19-net-mtk_eth_soc-remove-unused-sgmii-flags.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-09-v5.19-net-mtk_eth_soc-add-mask-and-update-PCS-speed-defini.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-10-v5.19-net-mtk_eth_soc-correct-802.3z-speed-setting.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-11-v5.19-net-mtk_eth_soc-correct-802.3z-duplex-setting.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-12-v5.19-net-mtk_eth_soc-stop-passing-phylink-state-to-sgmii-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-13-v5.19-net-mtk_eth_soc-provide-mtk_sgmii_config.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-14-v5.19-net-mtk_eth_soc-add-fixme-comment-for-state-speed-us.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-16-v5.19-net-mtk_eth_soc-move-restoration-of-SYSCFG0-to-mac_f.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-17-v5.19-net-mtk_eth_soc-convert-code-structure-to-suit-split.patch
-git am $open_wrt/target/linux/generic/backport-5.15/704-18-v5.19-net-mtk_eth_soc-partially-convert-to-phylink_pcs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-01-v5.17-net-dsa-mt7530-iterate-using-dsa_switch_for_each_use.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-02-v5.19-net-dsa-mt7530-populate-supported_interfaces-and-mac.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-03-v5.19-net-dsa-mt7530-remove-interface-checks.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-04-v5.19-net-dsa-mt7530-drop-use-of-phylink_helper_basex_spee.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-05-v5.19-net-dsa-mt7530-only-indicate-linkmodes-that-can-be-s.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-06-v5.19-net-dsa-mt7530-switch-to-use-phylink_get_linkmodes.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-07-v5.19-net-dsa-mt7530-partially-convert-to-phylink_pcs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-08-v5.19-net-dsa-mt7530-move-autoneg-handling-to-PCS-validati.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-09-v5.19-net-dsa-mt7530-mark-as-non-legacy.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-10-v5.19-net-dsa-mt753x-fix-pcs-conversion-regression.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-11-v6.0-net-dsa-mt7530-rework-mt7530_hw_vlan_-add-del.patch
-git am $open_wrt/target/linux/generic/backport-5.15/705-13-v6.0-net-dsa-mt7530-get-cpu-port-via-dp-cpu_dp-instead-of.patch
-git am $open_wrt/target/linux/generic/backport-5.15/706-00-v6.0-net-ethernet-mtk_eth_soc-rely-on-page_pool-for-singl.patch
-git am $open_wrt/target/linux/generic/backport-5.15/706-01-v6.0-net-ethernet-mtk_eth_soc-add-basic-XDP-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/706-02-v6.0-net-ethernet-mtk_eth_soc-introduce-xdp-ethtool-count.patch
-git am $open_wrt/target/linux/generic/backport-5.15/706-03-v6.0-net-ethernet-mtk_eth_soc-add-xmit-XDP-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/706-04-v6.0-net-ethernet-mtk_eth_soc-add-support-for-page_pool_g.patch
-git am $open_wrt/target/linux/generic/backport-5.15/706-05-v6.0-net-ethernet-mtk_eth_soc-introduce-mtk_xdp_frame_map.patch
-git am $open_wrt/target/linux/generic/backport-5.15/706-06-v6.0-net-ethernet-mtk_eth_soc-introduce-xdp-multi-frag-su.patch
-git am $open_wrt/target/linux/generic/backport-5.15/707-v6.3-net-pcs-add-driver-for-MediaTek-SGMII-PCS.patch
-git am $open_wrt/target/linux/generic/backport-5.15/708-01-v5.16-net-mvneta-Delete-unused-variable.patch
-git am $open_wrt/target/linux/generic/backport-5.15/708-02-v6.3-net-mvneta-fix-potential-double-frees-in-mvneta_txq_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/710-v6.0-net-ethernet-mtk_eth_soc-fix-hw-hash-reporting-for-M.patch
-git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-01-net-ethernet-mtk_eth_soc-fix-off-by-one-check-of-ARR.patch
-git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-02-net-ethernet-mtk_ppe-fix-possible-NULL-pointer-deref.patch
-git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-03-net-ethernet-mtk-ppe-fix-traffic-offload-with-bridge.patch
-git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-04-net-ethernet-mtk_eth_soc-remove-mtk_foe_entry_timest.patch
-git am $open_wrt/target/linux/generic/backport-5.15/712-v6.0-net-ethernet-mtk_eth_soc-enable-XDP-support-just-for.patch
-git am $open_wrt/target/linux/generic/backport-5.15/713-v6.0-net-ethernet-mtk_eth_soc-move-gdma_to_ppe-and-ppe_ba.patch
-git am $open_wrt/target/linux/generic/backport-5.15/714-v6.0-net-ethernet-mtk_eth_soc-move-ppe-table-hash-offset-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/715-v6.0-net-ethernet-mtk_eth_soc-add-the-capability-to-run-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/716-v6.0-net-ethernet-mtk_eth_soc-move-wdma_base-definitions-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/717-v6.0-net-ethernet-mtk_eth_soc-add-foe_entry_size-to-mtk_e.patch
-git am $open_wrt/target/linux/generic/backport-5.15/718-v6.0-net-ethernet-mtk_eth_soc-fix-typo-in-__mtk_foe_entry.patch
-git am $open_wrt/target/linux/generic/backport-5.15/719-v6.0-net-ethernet-mtk_eth_soc-check-max-allowed-value-in-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/720-v6.0-net-ethernet-mtk_eth_wed-add-mtk_wed_configure_irq-a.patch
-git am $open_wrt/target/linux/generic/backport-5.15/721-v6.0-net-ethernet-mtk_eth_wed-add-wed-support-for-mt7986-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/722-v6.0-net-ethernet-mtk_eth_wed-add-axi-bus-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/723-v6.0-net-ethernet-mtk_eth_soc-introduce-flow-offloading-s.patch
-git am $open_wrt/target/linux/generic/backport-5.15/724-v6.0-net-ethernet-mtk_eth_soc-enable-flow-offloading-supp.patch
-git am $open_wrt/target/linux/generic/backport-5.15/724-v6.0-net-ethernet-mtk_eth_soc-fix-wrong-use-of-new-helper.patch
-git am $open_wrt/target/linux/generic/backport-5.15/725-v6.0-net-ethernet-mtk_eth_soc-fix-usage-of-foe_entry_size.patch
-git am $open_wrt/target/linux/generic/backport-5.15/726-v6.0-net-ethernet-mtk_eth_soc-fix-mask-of-RX_DMA_GET_SPOR.patch
-git am $open_wrt/target/linux/generic/backport-5.15/727-v6.1-net-ethernet-mtk_eth_soc-fix-state-in-__mtk_foe_entr.patch
-git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-01-net-ethernet-mtk_eth_soc-fix-possible-memory-leak-in.patch
-git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-02-net-ethernet-mtk_eth_wed-add-missing-put_device-in-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-03-net-ethernet-mtk_eth_wed-add-missing-of_node_put.patch
-git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-04-net-ethernet-mtk_eth_soc-fix-resource-leak-in-error-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-05-net-ethernet-mtk_eth_soc-fix-memory-leak-in-error-pa.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-01-v6.1-net-ethernet-mtk_wed-introduce-wed-mcu-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-02-v6.1-net-ethernet-mtk_wed-introduce-wed-wo-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-03-v6.1-net-ethernet-mtk_wed-rename-tx_wdma-array-in-rx_wdma.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-04-v6.1-net-ethernet-mtk_wed-add-configure-wed-wo-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-05-v6.1-net-ethernet-mtk_wed-add-rx-mib-counters.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-06-v6.1-net-ethernet-mtk_eth_soc-do-not-overwrite-mtu-config.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-07-v6.1-net-ethernet-mtk_eth_soc-remove-cpu_relax-in-mtk_pen.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-08-v6.2-net-ethernet-mtk_eth_soc-fix-RSTCTRL_PPE-0-1-definit.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-09-v6.2-net-ethernet-mtk_wed-add-wcid-overwritten-support-fo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-10-v6.2-net-ethernet-mtk_wed-return-status-value-in-mtk_wdma.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-11-v6.2-net-ethernet-mtk_wed-move-MTK_WDMA_RESET_IDX_TX-conf.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-12-v6.2-net-ethernet-mtk_wed-update-mtk_wed_stop.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-13-v6.2-net-ethernet-mtk_wed-add-mtk_wed_rx_reset-routine.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-14-v6.2-net-ethernet-mtk_wed-add-reset-to-tx_ring_setup-call.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-15-v6.2-net-ethernet-mtk_wed-fix-sleep-while-atomic-in-mtk_w.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-16-v6.3-net-ethernet-mtk_wed-get-rid-of-queue-lock-for-rx-qu.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-17-v6.3-net-ethernet-mtk_wed-get-rid-of-queue-lock-for-tx-qu.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-18-v6.3-net-ethernet-mtk_eth_soc-introduce-mtk_hw_reset-util.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-19-v6.3-net-ethernet-mtk_eth_soc-introduce-mtk_hw_warm_reset.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-20-v6.3-net-ethernet-mtk_eth_soc-align-reset-procedure-to-ve.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-21-v6.3-net-ethernet-mtk_eth_soc-add-dma-checks-to-mtk_hw_re.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-22-v6.3-net-ethernet-mtk_wed-add-reset-reset_complete-callba.patch
-git am $open_wrt/target/linux/generic/backport-5.15/729-23-v6.3-net-ethernet-mtk_wed-add-reset-to-rx_ring_setup-call.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-01-v6.3-net-ethernet-mtk_eth_soc-account-for-vlan-in-rx-head.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-02-v6.3-net-ethernet-mtk_eth_soc-increase-tx-ring-side-for-Q.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-03-v6.3-net-ethernet-mtk_eth_soc-avoid-port_mg-assignment-on.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-04-v6.3-net-ethernet-mtk_eth_soc-implement-multi-queue-suppo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-05-v6.3-net-dsa-tag_mtk-assign-per-port-queues.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-06-v6.3-net-ethernet-mediatek-ppe-assign-per-port-queues-for.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-08-v6.3-net-dsa-add-support-for-DSA-rx-offloading-via-metada.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-09-v6.3-net-ethernet-mtk_eth_soc-fix-VLAN-rx-hardware-accele.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-10-v6.3-net-ethernet-mtk_eth_soc-drop-packets-to-WDMA-if-the.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-12-v6.3-net-ethernet-mtk_eth_soc-disable-hardware-DSA-untagg.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-13-v6.3-net-ethernet-mtk_eth_soc-enable-special-tag-when-any.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-14-v6.3-net-ethernet-mtk_eth_soc-fix-DSA-TX-tag-hwaccel-for-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-15-v6.3-net-ethernet-mtk_wed-No-need-to-clear-memory-after-a.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-16-v6.3-net-ethernet-mtk_wed-fix-some-possible-NULL-pointer-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-17-v6.3-net-ethernet-mtk_wed-fix-possible-deadlock-if-mtk_we.patch
-git am $open_wrt/target/linux/generic/backport-5.15/730-18-v6.3-net-ethernet-mtk_eth_soc-fix-tx-throughput-regressio.patch
-git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0001-net-phy-Introduce-QUSGMII-PHY-mode.patch
-git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0002-net-phy-Add-helper-to-derive-the-number-of-ports-fro.patch
-git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0003-net-phy-Add-1000BASE-KX-interface-mode.patch
-git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0004-net-phy-Add-support-for-rate-matching.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-01-net-ethernet-mtk_eth_soc-Avoid-truncating-allocation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-02-net-mtk_eth_soc-add-definitions-for-PCS.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-03-net-mtk_eth_soc-eliminate-unnecessary-error-handling.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-04-net-mtk_eth_soc-add-pcs_get_state-implementation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-05-net-mtk_eth_soc-convert-mtk_sgmii-to-use-regmap_upda.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-06-net-mtk_eth_soc-add-out-of-band-forcing-of-speed-and.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-07-net-mtk_eth_soc-move-PHY-power-up.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-08-net-mtk_eth_soc-move-interface-speed-selection.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-09-net-mtk_eth_soc-add-advertisement-programming.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-10-net-mtk_eth_soc-move-and-correct-link-timer-programm.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-11-net-mtk_eth_soc-add-support-for-in-band-802.3z-negot.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-12-net-mediatek-sgmii-ensure-the-SGMII-PHY-is-powered-d.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-13-net-mediatek-sgmii-fix-duplex-configuration.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-14-mtk_sgmii-enable-PCS-polling-to-allow-SFP-work.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-15-net-ethernet-mtk_eth_soc-reset-PCS-state.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-16-net-ethernet-mtk_eth_soc-only-write-values-if-needed.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-18-net-ethernet-mtk_eth_soc-add-support-for-MT7981.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-19-net-ethernet-mtk_eth_soc-set-MDIO-bus-clock-frequenc.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-20-net-ethernet-mtk_eth_soc-switch-to-external-PCS-driv.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-21-net-ethernet-mtk_eth_soc-add-missing-ppe-cache-flush.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-22-net-mtk_eth_soc-use-WO-firmware-for-MT7981.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-23-net-ethernet-mtk_eth_soc-fix-NULL-pointer-dereferenc.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-24-net-ethernet-mtk_eth_soc-ppe-add-support-for-flow-ac.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-25-net-ethernet-mediatek-fix-ppe-flow-accounting-for-v1.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-26-net-ethernet-mtk_eth_soc-drop-generic-vlan-rx-offloa.patch
-git am $open_wrt/target/linux/generic/backport-5.15/733-v6.5-27-net-ethernet-mtk_eth_soc-always-mtk_get_ib1_pkt_type.patch
-git am $open_wrt/target/linux/generic/backport-5.15/734-v5.16-0001-net-bgmac-improve-handling-PHY.patch
-git am $open_wrt/target/linux/generic/backport-5.15/734-v5.16-0002-net-bgmac-support-MDIO-described-in-DT.patch
-git am $open_wrt/target/linux/generic/backport-5.15/734-v6.8-net-phy-bcm54612e-add-suspend-resume.patch
-git am $open_wrt/target/linux/generic/backport-5.15/735-v6.0-0001-net-phy-Add-support-for-AQR113C-EPHY.patch
-git am $open_wrt/target/linux/generic/backport-5.15/736-v6.1-0001-net-phy-aquantia-Add-some-additional-phy-interfaces.patch
-git am $open_wrt/target/linux/generic/backport-5.15/736-v6.1-0002-net-phy-aquantia-Add-support-for-rate-matching.patch
-git am $open_wrt/target/linux/generic/backport-5.15/737-01-v6.7-net-phy-aquantia-move-to-separate-directory.patch
-git am $open_wrt/target/linux/generic/backport-5.15/737-02-v6.7-net-phy-aquantia-move-MMD_VEND-define-to-header.patch
-git am $open_wrt/target/linux/generic/backport-5.15/737-03-v6.7-net-phy-aquantia-add-firmware-load-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/742-v5.16-net-phy-at803x-add-support-for-qca-8327-internal-phy.patch
-git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0001-net-dsa-b53-Include-all-ports-in-enabled_ports.patch
-git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0002-net-dsa-b53-Drop-BCM5301x-workaround-for-a-wrong-CPU.patch
-git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0003-net-dsa-b53-Improve-flow-control-setup-on-BCM5301x.patch
-git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0004-net-dsa-b53-Drop-unused-cpu_port-field.patch
-git am $open_wrt/target/linux/generic/backport-5.15/745-v5.16-01-net-phy-at803x-add-support-for-qca-8327-A-variant.patch
-git am $open_wrt/target/linux/generic/backport-5.15/745-v5.16-02-net-phy-at803x-add-resume-suspend-function-to-qca83x.patch
-git am $open_wrt/target/linux/generic/backport-5.15/745-v5.16-03-net-phy-at803x-fix-spacing-and-improve-name-for-83xx.patch
-git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-01-net-phy-at803x-fix-resume-for-QCA8327-phy.patch
-git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-02-net-phy-at803x-add-DAC-amplitude-fix-for-8327-phy.patch
-git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-03-net-phy-at803x-enable-prefer-master-for-83xx-interna.patch
-git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-04-net-phy-at803x-better-describe-debug-regs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-01-dsa-qca8k-add-mac-power-sel-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-02-dt-bindings-net-dsa-qca8k-Add-SGMII-clock-phase-prop.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-03-net-dsa-qca8k-add-support-for-sgmii-falling-edge.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-04-dt-bindings-net-dsa-qca8k-Document-support-for-CPU-p.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-05-net-dsa-qca8k-add-support-for-cpu-port-6.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-06-net-dsa-qca8k-rework-rgmii-delay-logic-and-scan-for-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-07-dt-bindings-net-dsa-qca8k-Document-qca-sgmii-enable-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-08-net-dsa-qca8k-add-explicit-SGMII-PLL-enable.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-09-dt-bindings-net-dsa-qca8k-Document-qca-led-open-drai.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-10-net-dsa-qca8k-add-support-for-pws-config-reg.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-11-dt-bindings-net-dsa-qca8k-document-support-for-qca83.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-12-net-dsa-qca8k-add-support-for-QCA8328.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-13-net-dsa-qca8k-set-internal-delay-also-for-sgmii.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-14-net-dsa-qca8k-move-port-config-to-dedicated-struct.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-15-dt-bindings-net-ipq8064-mdio-fix-warning-with-new-qc.patch
-git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-16-dt-bindings-net-dsa-qca8k-convert-to-YAML-schema.patch
-git am $open_wrt/target/linux/generic/backport-5.15/748-v5.16-net-dsa-qca8k-fix-delay-applied-to-wrong-cpu-in-parse-p.patch
-git am $open_wrt/target/linux/generic/backport-5.15/749-v5.16-net-dsa-qca8k-tidy-for-loop-in-setup-and-add-cpu-port-c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v5.16-net-dsa-qca8k-make-sure-pad0-mac06-exchange-is-disabled.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-01-net-ethernet-mtk_ppe-add-MTK_FOE_ENTRY_V-1-2-_SIZE-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-02-net-ethernet-mtk_eth_soc-remove-incorrect-PLL-config.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-03-net-ethernet-mtk_eth_soc-remove-mac_pcs_get_state-an.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-05-net-ethernet-mtk_eth_soc-add-version-in-mtk_soc_data.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-06-net-ethernet-mtk_eth_soc-increase-MAX_DEVS-to-3.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-07-net-ethernet-mtk_eth_soc-rely-on-MTK_MAX_DEVS-and-re.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-08-net-ethernet-mtk_eth_soc-add-NETSYS_V3-version-suppo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-09-net-ethernet-mtk_eth_soc-convert-caps-in-mtk_soc_dat.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-10-net-ethernet-mtk_eth_soc-convert-clock-bitmap-to-u64.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-11-net-ethernet-mtk_eth_soc-add-basic-support-for-MT798.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-12-net-ethernet-mtk_eth_soc-enable-page_pool-support-fo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-13-net-ethernet-mtk_eth_soc-enable-nft-hw-flowtable_off.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-14-net-ethernet-mtk_eth_soc-support-per-flow-accounting.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-15-net-ethernet-mtk_eth_soc-fix-NULL-pointer-on-hw-rese.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-16-net-ethernet-mtk_eth_soc-fix-register-definitions-fo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-17-net-ethernet-mtk_eth_soc-add-reset-bits-for-MT7988.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-18-net-ethernet-mtk_eth_soc-add-support-for-in-SoC-SRAM.patch
-git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-19-net-ethernet-mtk_eth_soc-support-36-bit-DMA-addressi.patch
-git am $open_wrt/target/linux/generic/backport-5.15/751-00a-STABLE-net-ethernet-mediatek-split-tx-and-rx-fields-in-mtk_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/751-00b-net-ethernet-mediatek-use-QDMA-instead-of-ADMAv2-on-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/751-01-v6.4-net-ethernet-mtk_eth_soc-add-code-for-offloading-flo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/751-02-v6.4-net-ethernet-mediatek-mtk_ppe-prefer-newly-added-l2-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/751-03-v6.4-net-ethernet-mtk_eth_soc-improve-keeping-track-of-of.patch
-git am $open_wrt/target/linux/generic/backport-5.15/751-04-v6.4-net-ethernet-mediatek-fix-ppe-flow-accounting-for-L2.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-01-v6.6-net-ethernet-mtk_wed-add-some-more-info-in-wed_txinf.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-02-v6.6-net-ethernet-mtk_wed-minor-change-in-wed_-tx-rx-info.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-03-v6.6-net-ethernet-mtk_eth_soc-rely-on-mtk_pse_port-defini.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-04-v6.6-net-ethernet-mtk_wed-check-update_wo_rx_stats-in-mtk.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-05-v6.7-net-ethernet-mtk_wed-do-not-assume-offload-callbacks.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-06-v6.7-net-ethernet-mtk_wed-introduce-versioning-utility-ro.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-07-v6.7-net-ethernet-mtk_wed-do-not-configure-rx-offload-if-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-08-v6.7-net-ethernet-mtk_wed-rename-mtk_rxbm_desc-in-mtk_wed.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-09-v6.7-net-ethernet-mtk_wed-introduce-mtk_wed_buf-structure.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-10-v6.7-net-ethernet-mtk_wed-move-mem_region-array-out-of-mt.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-11-v6.7-net-ethernet-mtk_wed-make-memory-region-optional.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-12-v6.7-net-ethernet-mtk_wed-fix-EXT_INT_STATUS_RX_FBUF-defi.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-13-v6.7-net-ethernet-mtk_wed-add-mtk_wed_soc_data-structure.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-14-v6.7-net-ethernet-mtk_wed-introduce-WED-support-for-MT798.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-15-v6.7-net-ethernet-mtk_wed-refactor-mtk_wed_check_wfdma_rx.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-16-v6.7-net-ethernet-mtk_wed-introduce-partial-AMSDU-offload.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-17-v6.7-net-ethernet-mtk_wed-introduce-hw_rro-support-for-MT.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-18-v6.7-net-ethernet-mtk_wed-debugfs-move-wed_v2-specific-re.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-19-v6.7-net-ethernet-mtk_wed-debugfs-add-WED-3.0-debugfs-ent.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-20-v6.7-net-ethernet-mtk_wed-add-wed-3.0-reset-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/752-24-v6.8-net-ethernet-mtk_wed-add-support-for-devices-with-mo.patch
-git am $open_wrt/target/linux/generic/backport-5.15/753-v6.9-net-ethernet-mtk_eth_soc-fix-WED-wifi-reset.patch
-git am $open_wrt/target/linux/generic/backport-5.15/754-25-v6.10-net-ethernet-mtk_eth_soc-handle-dma-buffer-size-soc-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/754-29-v6.10-net-ethernet-mtk_ppe-Change-PPE-entries-number-to-16.patch
-git am $open_wrt/target/linux/generic/backport-5.15/754-30-v6.10-net-ethernet-mtk_eth_soc-implement-.-get-set-_pausep.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-01-v5.16-net-dsa-qca8k-fix-internal-delay-applied-to-the-wrong-PAD.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-02-v5.16-net-dsa-qca8k-fix-MTU-calculation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-03-v5.17-net-next-net-dsa-qca8k-remove-redundant-check-in-parse_port_config.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-04-v5.17-net-next-net-dsa-qca8k-convert-to-GENMASK_FIELD_PREP_FIELD_GET.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-05-v5.17-net-next-net-dsa-qca8k-remove-extra-mutex_init-in-qca8k_setup.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-06-v5.17-net-next-net-dsa-qca8k-move-regmap-init-in-probe-and-set-it.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-07-v5.17-net-next-net-dsa-qca8k-initial-conversion-to-regmap-heper.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-08-v5.17-net-next-net-dsa-qca8k-add-additional-MIB-counter-and-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-09-v5.17-net-next-net-dsa-qca8k-add-support-for-port-fast-aging.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-10-v5.17-net-next-net-dsa-qca8k-add-set_ageing_time-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-11-v5.17-net-next-net-dsa-qca8k-add-support-for-mdb_add-del.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-12-v5.17-net-next-net-dsa-qca8k-add-support-for-mirror-mode.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-13-v5.17-net-next-net-dsa-qca8k-add-LAG-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/764-14-v5.17-net-next-net-dsa-qca8k-fix-warning-in-LAG-feature.patch
-git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-01-net-next-net-dsa-reorder-PHY-initialization-with-MTU-setup-in.patch
-git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-02-net-next-net-dsa-merge-rtnl_lock-sections-in-dsa_slave_create.patch
-git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-03-net-next-net-dsa-stop-updating-master-MTU-from-master.c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-04-net-next-net-dsa-hold-rtnl_mutex-when-calling-dsa_master_-set.patch
-git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-05-net-next-net-dsa-first-set-up-shared-ports-then-non-shared-po.patch
-git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-06-net-next-net-dsa-setup-master-before-ports.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-01-net-dsa-provide-switch-operations-for-tracking-the-m.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-02-net-dsa-replay-master-state-events-in-dsa_tree_-setu.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-03-net-dsa-tag_qca-convert-to-FIELD-macro.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-04-net-dsa-tag_qca-move-define-to-include-linux-dsa.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-05-net-dsa-tag_qca-enable-promisc_on_master-flag.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-06-net-dsa-tag_qca-add-define-for-handling-mgmt-Etherne.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-07-net-dsa-tag_qca-add-define-for-handling-MIB-packet.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-08-net-dsa-tag_qca-add-support-for-handling-mgmt-and-MI.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-09-net-dsa-qca8k-add-tracking-state-of-master-port.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-10-net-dsa-qca8k-add-support-for-mgmt-read-write-in-Eth.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-11-net-dsa-qca8k-add-support-for-mib-autocast-in-Ethern.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-12-net-dsa-qca8k-add-support-for-phy-read-write-with-mg.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-13-net-dsa-qca8k-move-page-cache-to-driver-priv.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-14-net-dsa-qca8k-cache-lo-and-hi-for-mdio-write.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-15-net-dsa-qca8k-add-support-for-larger-read-write-size.patch
-git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-16-net-dsa-qca8k-introduce-qca8k_bulk_read-write-functi.patch
-git am $open_wrt/target/linux/generic/backport-5.15/767-v5.18-net-dsa-qca8k-check-correct-variable-in-qca8k_phy_et.patch
-git am $open_wrt/target/linux/generic/backport-5.15/768-v5.18-net-dsa-qca8k-fix-noderef.cocci-warnings.patch
-git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-01-net-dsa-qca8k-drop-MTU-tracking-from-qca8k_priv.patch
-git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-02-net-dsa-qca8k-drop-port_sts-from-qca8k_priv.patch
-git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-03-net-dsa-qca8k-rework-and-simplify-mdiobus-logic.patch
-git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-04-net-dsa-qca8k-drop-dsa_switch_ops-from-qca8k_priv.patch
-git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-05-net-dsa-qca8k-correctly-handle-mdio-read-error.patch
-git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-06-net-dsa-qca8k-unify-bus-id-naming-with-legacy-and-OF.patch
-git am $open_wrt/target/linux/generic/backport-5.15/770-v6.0-net-dsa-qca8k-move-driver-to-qca-dir.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-01-net-dsa-qca8k-cache-match-data-to-speed-up-access.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-02-net-dsa-qca8k-make-mib-autocast-feature-optional.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-03-net-dsa-qca8k-move-mib-struct-to-common-code.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-04-net-dsa-qca8k-move-qca8k-read-write-rmw-and-reg-tabl.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-05-net-dsa-qca8k-move-qca8k-bulk-read-write-helper-to-c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-06-net-dsa-qca8k-move-mib-init-function-to-common-code.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-07-net-dsa-qca8k-move-port-set-status-eee-ethtool-stats.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-08-net-dsa-qca8k-move-bridge-functions-to-common-code.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-09-net-dsa-qca8k-move-set-age-MTU-port-enable-disable-f.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-10-net-dsa-qca8k-move-port-FDB-MDB-function-to-common-c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-11-net-dsa-qca8k-move-port-mirror-functions-to-common-c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-12-net-dsa-qca8k-move-port-VLAN-functions-to-common-cod.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-13-net-dsa-qca8k-move-port-LAG-functions-to-common-code.patch
-git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-14-net-dsa-qca8k-move-read_switch_id-function-to-common.patch
-git am $open_wrt/target/linux/generic/backport-5.15/772-v6.0-net-dsa-qca8k-fix-NULL-pointer-dereference-for-of_de.patch
-git am $open_wrt/target/linux/generic/backport-5.15/773-v5.18-1-net-dsa-Move-VLAN-filtering-syncing-out-of-dsa_switc.patch
-git am $open_wrt/target/linux/generic/backport-5.15/773-v5.18-2-net-dsa-Avoid-cross-chip-syncing-of-VLAN-filtering.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-01-net-dsa-rtl8366rb-Support-bridge-offloading.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-02-net-dsa-rtl8366-Drop-custom-VLAN-set-up.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-03-net-dsa-rtl8366rb-Rewrite-weird-VLAN-filering-enable.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-06-net-dsa-rtl8366-Drop-and-depromote-pointless-prints.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-07-net-dsa-rtl8366rb-Use-core-filtering-tracking.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-08-net-dsa-rtl8366rb-Support-disabling-learning.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-09-net-dsa-rtl8366rb-Support-fast-aging.patch
-git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-10-net-dsa-rtl8366rb-Support-setting-STP-state.patch
-git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-01-net-ethernet-stmicro-stmmac-move-queue-reset-to-dedi.patch
-git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-02-net-ethernet-stmicro-stmmac-first-disable-all-queues.patch
-git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-03-net-ethernet-stmicro-stmmac-move-dma-conf-to-dedicat.patch
-git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-04-net-ethernet-stmicro-stmmac-generate-stmmac-dma-conf.patch
-git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-05-net-ethernet-stmicro-stmmac-permit-MTU-change-with-i.patch
-git am $open_wrt/target/linux/generic/backport-5.15/776-v6.1-01-net-dsa-qca8k-fix-inband-mgmt-for-big-endian-systems.patch
-git am $open_wrt/target/linux/generic/backport-5.15/776-v6.1-02-net-dsa-qca8k-fix-ethtool-autocast-mib-for-big-endia.patch
-git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-01-net-dsa-qca8k-fix-wrong-length-value-for-mgmt-eth-pa.patch
-git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-02-net-dsa-tag_qca-fix-wrong-MGMT_DATA2-size.patch
-git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-03-Revert-net-dsa-qca8k-cache-lo-and-hi-for-mdio-write.patch
-git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-04-net-dsa-qca8k-introduce-single-mii-read-write-lo-hi.patch
-git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-05-net-dsa-qca8k-improve-mdio-master-read-write-by-usin.patch
-git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-01-net-phy-at803x-add-fiber-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-02-net-phy-at803x-support-downstream-SFP-cage.patch
-git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-03-net-phy-at803x-fix-NULL-pointer-dereference-on-AR9331-PHY.patch
-git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-04-net-phy-at803x-fix-error-return-code-in-at803x_probe.patch
-git am $open_wrt/target/linux/generic/backport-5.15/780-v5.16-bus-mhi-pci_generic-Introduce-Sierra-EM919X-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/781-v6.1-bus-mhi-host-always-print-detected-modem-name.patch
-git am $open_wrt/target/linux/generic/backport-5.15/782-v6.1-net-dsa-mt7530-add-support-for-in-band-link-status.patch
-git am $open_wrt/target/linux/generic/backport-5.15/783-v6.1-net-sfp-re-implement-soft-state-polling-setup.patch
-git am $open_wrt/target/linux/generic/backport-5.15/784-v6.1-net-sfp-move-quirk-handling-into-sfp.c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/785-v6.1-net-sfp-move-Alcatel-Lucent-3FE46541AA-fixup.patch
-git am $open_wrt/target/linux/generic/backport-5.15/786-v6.1-net-sfp-move-Huawei-MA5671A-fixup.patch
-git am $open_wrt/target/linux/generic/backport-5.15/787-v6.1-net-sfp-add-support-for-HALNy-GPON-SFP.patch
-git am $open_wrt/target/linux/generic/backport-5.15/788-v6.3-net-dsa-mt7530-use-external-PCS-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/789-v6.3-net-sfp-add-quirk-enabling-2500Base-x-for-HG-MXPD-48.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.0-net-mii-add-mii_bmcr_encode_fixed.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0001-net-dsa-mt7530-make-some-noise-if-register-read-fail.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0002-net-dsa-mt7530-refactor-SGMII-PCS-creation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0003-net-dsa-mt7530-use-unlocked-regmap-accessors.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0004-net-dsa-mt7530-use-regmap-to-access-switch-register-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0005-net-dsa-mt7530-move-SGMII-PCS-creation-to-mt7530_pro.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0006-net-dsa-mt7530-introduce-mutex-helpers.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0007-net-dsa-mt7530-move-p5_intf_modes-function-to-mt7530.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0008-net-dsa-mt7530-introduce-mt7530_probe_common-helper-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0009-net-dsa-mt7530-introduce-mt7530_remove_common-helper.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0011-net-dsa-mt7530-introduce-separate-MDIO-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0012-net-dsa-mt7530-skip-locking-if-MDIO-bus-isn-t-presen.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0013-net-dsa-mt7530-introduce-driver-for-MT7988-built-in-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0014-net-dsa-mt7530-fix-support-for-MT7531BE.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.2-01-net-phy-Add-driver-for-Motorcomm-yt8521-gigabit-ethernet.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.2-02-net-phy-fix-yt8521-duplicated-argument-to-or.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.2-03-net-phy-add-Motorcomm-YT8531S-phy-id.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-04-net-phy-fix-the-spelling-problem-of-Sentinel.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-05-net-phy-motorcomm-change-the-phy-id-of-yt8521-and-yt8531s.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-06-net-phy-Add-BIT-macro-for-Motorcomm-yt8521-yt8531-gigabit.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-07-net-phy-Add-dts-support-for-Motorcomm-yt8521-gigabit.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-08-net-phy-Add-dts-support-for-Motorcomm-yt8531s-gigabit.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-09-net-phy-Add-driver-for-Motorcomm-yt8531-gigabit-ethernet.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-10-net-phy-motorcomm-uninitialized-variables-in.patch
-git am $open_wrt/target/linux/generic/backport-5.15/791-v6.6-11-net-phy-motorcomm-Add-pad-drive-strength-cfg-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/792-01-v6.0-net-phylink-disable-PCS-polling-over-major-configura.patch
-git am $open_wrt/target/linux/generic/backport-5.15/792-02-v6.0-net-phylink-fix-NULL-pl-pcs-dereference-during-phyli.patch
-git am $open_wrt/target/linux/generic/backport-5.15/792-03-v6.6-net-phylink-add-pcs_enable-pcs_disable-methods.patch
-git am $open_wrt/target/linux/generic/backport-5.15/792-v5.16-net-dpaa2-mac-add-support-for-more-10G-modes.patch
-git am $open_wrt/target/linux/generic/backport-5.15/793-v6.6-net-pcs-lynxi-implement-pcs_disable-op.patch
-git am $open_wrt/target/linux/generic/backport-5.15/794-v6.2-net-core-Allow-live-renaming-when-an-interface-is-up.patch
-git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-01-usbnet-ipheth-fix-risk-of-NULL-pointer-deallocation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-02-usbnet-ipheth-transmit-URBs-without-trailing-padding.patch
-git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-03-usbnet-ipheth-add-CDC-NCM-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-04-usbnet-ipheth-update-Kconfig-description.patch
-git am $open_wrt/target/linux/generic/backport-5.15/797-v5.17-net-usb-ax88179_178a-add-TSO-feature.patch
-git am $open_wrt/target/linux/generic/backport-5.15/798-net-next-net-sfp-add-quirk-for-Fiberstone-GPON-ONU-34-20BI.patch
-git am $open_wrt/target/linux/generic/backport-5.15/800-v6.0-0001-dt-bindings-leds-add-Broadcom-s-BCM63138-controller.patch
-git am $open_wrt/target/linux/generic/backport-5.15/800-v6.0-0002-leds-bcm63138-add-support-for-BCM63138-controller.patch
-git am $open_wrt/target/linux/generic/backport-5.15/801-v6.0-0001-dt-bindings-leds-leds-bcm63138-unify-full-stops-in-d.patch
-git am $open_wrt/target/linux/generic/backport-5.15/801-v6.0-0002-leds-add-help-info-about-BCM63138-module-name.patch
-git am $open_wrt/target/linux/generic/backport-5.15/801-v6.0-0003-leds-leds-bcm63138-get-rid-of-LED_OFF.patch
-git am $open_wrt/target/linux/generic/backport-5.15/802-v5.16-0001-nvmem-core-rework-nvmem-cell-instance-creation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/802-v5.16-0002-nvmem-core-add-nvmem-cell-post-processing-callback.patch
-git am $open_wrt/target/linux/generic/backport-5.15/802-v5.16-0003-nvmem-imx-ocotp-add-support-for-post-processing.patch
-git am $open_wrt/target/linux/generic/backport-5.15/803-v5.17-0002-nvmem-mtk-efuse-support-minimum-one-byte-access-stri.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0001-nvmem-core-Remove-unused-devm_nvmem_unregister.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0002-nvmem-core-Use-devm_add_action_or_reset.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0003-nvmem-core-Check-input-parameter-for-NULL-in-nvmem_u.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0004-nvmem-qfprom-fix-kerneldoc-warning.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0005-nvmem-sunxi_sid-Add-support-for-D1-variant.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0006-nvmem-meson-mx-efuse-replace-unnecessary-devm_kstrdu.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0007-nvmem-add-driver-for-Layerscape-SFP-Security-Fuse-Pr.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0008-nvmem-qfprom-Increase-fuse-blow-timeout-to-prevent-w.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0009-nvmem-Add-driver-for-OCOTP-in-Sunplus-SP7021.patch
-git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0010-nvmem-brcm_nvram-parse-NVRAM-content-into-NVMEM-cell.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0001-nvmem-bcm-ocotp-mark-ACPI-device-ID-table-as-maybe-u.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0002-nvmem-sunplus-ocotp-staticize-sp_otp_v0.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0003-nvmem-sunplus-ocotp-drop-useless-probe-confirmation.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0004-nvmem-core-support-passing-DT-node-in-cell-info.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0005-nvmem-brcm_nvram-find-Device-Tree-nodes-for-NVMEM-ce.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0006-nvmem-Add-Apple-eFuse-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0007-nvmem-qfprom-using-pm_runtime_resume_and_get-instead.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0008-nvmem-sfp-Use-regmap.patch
-git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0009-nvmem-sfp-Add-support-for-TA-2.1-devices.patch
-git am $open_wrt/target/linux/generic/backport-5.15/806-v6.0-0001-nvmem-microchip-otpc-add-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/806-v6.0-0002-nvmem-mtk-efuse-Simplify-with-devm_platform_get_and_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0002-nvmem-add-driver-handling-U-Boot-environment-variabl.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0004-nvmem-brcm_nvram-Use-kzalloc-for-allocating-only-one.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0005-nvmem-prefix-all-symbols-with-NVMEM_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0006-nvmem-sort-config-symbols-alphabetically.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0007-nvmem-u-boot-env-find-Device-Tree-nodes-for-NVMEM-ce.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0008-nvmem-lan9662-otp-add-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0009-nvmem-u-boot-env-fix-crc32-casting-type.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0010-nvmem-lan9662-otp-Fix-compatible-string.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0011-nvmem-u-boot-env-fix-crc32_data_offset-on-redundant-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0013-nvmem-lan9662-otp-Change-return-type-of-lan9662_otp_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0001-nvmem-stm32-move-STM32MP15_BSEC_NUM_LOWER-in-config.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0002-nvmem-stm32-add-warning-when-upper-OTPs-are-updated.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0003-nvmem-stm32-add-nvmem-type-attribute.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0004-nvmem-stm32-fix-spelling-typo-in-comment.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0005-nvmem-Kconfig-Fix-spelling-mistake-controlls-control.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0006-nvmem-u-boot-env-add-Broadcom-format-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0007-nvmem-brcm_nvram-Add-check-for-kzalloc.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0008-nvmem-sunxi_sid-Always-use-32-bit-MMIO-reads.patch
-git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0013-nvmem-core-fix-device-node-refcounting.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0001-nvmem-core-remove-spurious-white-space.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0002-nvmem-core-add-an-index-parameter-to-the-cell.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0003-nvmem-core-move-struct-nvmem_cell_info-to-nvmem-prov.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0004-nvmem-core-drop-the-removal-of-the-cells-in-nvmem_ad.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0005-nvmem-core-add-nvmem_add_one_cell.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0006-nvmem-core-use-nvmem_add_one_cell-in-nvmem_add_cells.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0007-nvmem-stm32-add-OP-TEE-support-for-STM32MP13x.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0008-nvmem-stm32-detect-bsec-pta-presence-for-STM32MP15x.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0009-nvmem-rave-sp-eeprm-fix-kernel-doc-bad-line-warning.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0010-nvmem-qcom-spmi-sdam-register-at-device-init-time.patch
-git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0011-nvmem-stm32-fix-OPTEE-dependency.patch
-git am $open_wrt/target/linux/generic/backport-5.15/810-v5.17-net-qmi_wwan-add-ZTE-MF286D-modem-19d2-1485.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0001-nvmem-xilinx-zynqmp-make-modular.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0002-nvmem-core-introduce-NVMEM-layouts.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0003-nvmem-core-handle-the-absence-of-expected-layouts.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0004-nvmem-core-request-layout-modules-loading.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0005-nvmem-core-add-per-cell-post-processing.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0006-nvmem-core-allow-to-modify-a-cell-before-adding-it.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0007-nvmem-imx-ocotp-replace-global-post-processing-with-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0008-nvmem-cell-drop-global-cell_post_process.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0009-nvmem-core-provide-own-priv-pointer-in-post-process-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0010-nvmem-layouts-sl28vpd-Add-new-layout-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0011-nvmem-layouts-onie-tlv-Add-new-layout-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0012-nvmem-stm32-romem-mark-OF-related-data-as-maybe-unus.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0013-nvmem-mtk-efuse-Support-postprocessing-for-GPU-speed.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0014-nvmem-bcm-ocotp-Use-devm_platform_ioremap_resource.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0015-nvmem-nintendo-otp-Use-devm_platform_ioremap_resourc.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0016-nvmem-vf610-ocotp-Use-devm_platform_get_and_ioremap_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0017-nvmem-core-support-specifying-both-cell-raw-data-pos.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0018-nvmem-u-boot-env-post-process-ethaddr-env-variable.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0019-nvmem-Add-macro-to-register-nvmem-layout-drivers.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0020-nvmem-layouts-sl28vpd-Use-module_nvmem_layout_driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0021-nvmem-layouts-onie-tlv-Use-module_nvmem_layout_drive.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0022-nvmem-layouts-onie-tlv-Drop-wrong-module-alias.patch
-git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0023-nvmem-layouts-sl28vpd-set-varaiable-sl28vpd_layout-s.patch
-git am $open_wrt/target/linux/generic/backport-5.15/812-v6.2-firmware-nvram-bcm47xx-support-init-from-IO-memory.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0001-nvmem-imx-ocotp-set-varaiable-imx_ocotp_layout-stora.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0002-nvmem-imx-ocotp-Reverse-MAC-addresses-on-all-i.MX-de.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0003-nvmem-brcm_nvram-add-.read_post_process-for-MACs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0004-nvmem-rockchip-otp-Add-clks-and-reg_read-to-rockchip.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0005-nvmem-rockchip-otp-Generalize-rockchip_otp_wait_stat.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0006-nvmem-rockchip-otp-Use-devm_reset_control_array_get_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0007-nvmem-rockchip-otp-Improve-probe-error-handling.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0008-nvmem-rockchip-otp-Add-support-for-RK3588.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0009-nvmem-zynqmp-Switch-xilinx.com-emails-to-amd.com.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0010-nvmem-imx-support-i.MX93-OCOTP.patch
-git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0011-nvmem-core-add-support-for-fixed-cells-layout.patch
-git am $open_wrt/target/linux/generic/backport-5.15/814-v6.3-leds-Move-led_init_default_state_get-to-the-global-h.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-01-net-dsa-qca8k-move-qca8k_port_to_phy-to-header.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-02-net-dsa-qca8k-add-LEDs-basic-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-03-net-dsa-qca8k-add-LEDs-blink_set-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-04-leds-Provide-stubs-for-when-CLASS_LED-NEW_LEDS-are-d.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-05-net-phy-Add-a-binding-for-PHY-LEDs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-06-net-phy-phy_device-Call-into-the-PHY-driver-to-set-L.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-07-net-phy-marvell-Add-software-control-of-the-LEDs.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-08-net-phy-phy_device-Call-into-the-PHY-driver-to-set-L.patch
-git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-09-net-phy-marvell-Implement-led_blink_set.patch
-git am $open_wrt/target/linux/generic/backport-5.15/816-v6.4-net-phy-marvell-Fix-inconsistent-indenting-in-led_bl.patch
-git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-02-leds-trigger-netdev-Drop-NETDEV_LED_MODE_LINKUP-from.patch
-git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-03-leds-trigger-netdev-Rename-add-namespace-to-netdev-t.patch
-git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-04-leds-trigger-netdev-Convert-device-attr-to-macro.patch
-git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-05-leds-trigger-netdev-Use-mutex-instead-of-spinlocks.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-01-leds-add-APIs-for-LEDs-hw-control.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-02-leds-add-API-to-get-attached-device-for-LED-hw-contr.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-03-Documentation-leds-leds-class-Document-new-Hardware-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-04-leds-trigger-netdev-refactor-code-setting-device-nam.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-05-leds-trigger-netdev-introduce-check-for-possible-hw-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-06-leds-trigger-netdev-add-basic-check-for-hw-control-s.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-07-leds-trigger-netdev-reject-interval-store-for-hw_con.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-08-leds-trigger-netdev-add-support-for-LED-hw-control.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-09-leds-trigger-netdev-validate-configured-netdev.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-10-leds-trigger-netdev-init-mode-if-hw-control-already-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-11-leds-trigger-netdev-expose-netdev-trigger-modes-in-l.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-12-net-dsa-qca8k-implement-hw_control-ops.patch
-git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-13-net-dsa-qca8k-add-op-to-get-ports-netdev.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0001-nvmem-sunxi_sid-Convert-to-devm_platform_ioremap_res.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0002-nvmem-brcm_nvram-Use-devm_platform_get_and_ioremap_r.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0003-nvmem-lpc18xx_otp-Convert-to-devm_platform_ioremap_r.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0004-nvmem-meson-mx-efuse-Convert-to-devm_platform_iorema.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0005-nvmem-rockchip-efuse-Use-devm_platform_get_and_iorem.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0006-nvmem-stm32-romem-Use-devm_platform_get_and_ioremap_.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0007-nvmem-qfprom-do-some-cleanup.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0008-nvmem-uniphier-Use-devm_platform_get_and_ioremap_res.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0009-nvmem-add-new-NXP-QorIQ-eFuse-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0011-nvmem-Kconfig-Fix-typo-drive-driver.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0012-nvmem-sec-qfprom-Add-Qualcomm-secure-QFPROM-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0013-nvmem-u-boot-env-Replace-zero-length-array-with-DECL.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0014-nvmem-core-Create-all-cells-before-adding-the-nvmem-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0015-nvmem-core-Return-NULL-when-no-nvmem-layout-is-found.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0016-nvmem-core-Do-not-open-code-existing-functions.patch
-git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0017-nvmem-core-Notify-when-a-new-layout-is-registered.patch
-git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0001-nvmem-qfprom-Mark-core-clk-as-optional.patch
-git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0002-nvmem-add-explicit-config-option-to-read-old-syntax-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0003-nvmem-Use-device_get_match_data.patch
-git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0004-Revert-nvmem-add-new-config-option.patch
-git am $open_wrt/target/linux/generic/backport-5.15/821-v5.16-Bluetooth-btusb-Support-public-address-configuration.patch
-git am $open_wrt/target/linux/generic/backport-5.15/822-v5.17-Bluetooth-btusb-Fix-application-of-sizeof-to-pointer.patch
-git am $open_wrt/target/linux/generic/backport-5.15/823-v5.18-Bluetooth-btusb-Add-a-new-PID-VID-13d3-3567-for-MT79.patch
-git am $open_wrt/target/linux/generic/backport-5.15/824-v5.19-Bluetooth-btusb-Add-a-new-PID-VID-0489-e0c8-for-MT79.patch
-git am $open_wrt/target/linux/generic/backport-5.15/825-v6.1-Bluetooth-btusb-Add-a-new-VID-PID-0e8d-0608-for-MT79.patch
-git am $open_wrt/target/linux/generic/backport-5.15/826-v5.17-of-base-make-small-of_parse_phandle-variants-static-.patch
-git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0001-of-base-add-of_parse_phandle_with_optional_args.patch
-git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0002-of-property-make-.-cells-optional-for-simple-props.patch
-git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0003-of-property-add-nvmem-cell-cells-property.patch
-git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0004-of-device-Ignore-modalias-of-reused-nodes.patch
-git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0005-of-device-Do-not-ignore-error-code-in-of_device_ueve.patch
-git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0002-of-Update-of_device_get_modalias.patch
-git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0003-of-Rename-of_modalias_node.patch
-git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0004-of-Move-of_modalias-to-module.c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0005-of-Move-the-request-module-helper-logic-to-module.c.patch
-git am $open_wrt/target/linux/generic/backport-5.15/831-v6.1-dt-bindings-leds-Expand-LED_COLOR_ID-definitions.patch
-git am $open_wrt/target/linux/generic/backport-5.15/833-v6.8-leds-core-Add-more-colors-from-DT-bindings-to-led_co.patch.patch
-git am $open_wrt/target/linux/generic/backport-5.15/835-v6.9-0001-dt-bindings-leds-Add-FUNCTION-defines-for-per-band-W.patch
-git am $open_wrt/target/linux/generic/backport-5.15/835-v6.9-0002-dt-bindings-leds-Add-LED_FUNCTION_WAN_ONLINE-for-Int.patch
-git am $open_wrt/target/linux/generic/backport-5.15/860-v5.17-MIPS-ath79-drop-_machine_restart-again.patch
-git am $open_wrt/target/linux/generic/backport-5.15/870-v5.18-hwmon-lm70-Add-ti-tmp125-support.patch
-git am $open_wrt/target/linux/generic/backport-5.15/880-v5.19-cdc_ether-export-usbnet_cdc_zte_rx_fixup.patch
-git am $open_wrt/target/linux/generic/backport-5.15/881-v5.19-rndis_host-enable-the-bogus-MAC-fixup-for-ZTE-device.patch
-git am $open_wrt/target/linux/generic/backport-5.15/882-v5.19-rndis_host-limit-scope-of-bogus-MAC-address-detectio.patch
-git am $open_wrt/target/linux/generic/backport-5.15/890-v6.2-mtd-spinand-winbond-fix-flash-detection.patch
-git am $open_wrt/target/linux/generic/backport-5.15/891-v6.2-mtd-spinand-winbond-add-W25N02KV.patch
-git am $open_wrt/target/linux/generic/backport-5.15/892-v6.5-mtd-spinand-winbond-Fix-ecc_get_status.patch
-git am $open_wrt/target/linux/generic/backport-5.15/893-v6.12-mtd-spinand-winbond-add-support-for-W25N01KV.patch
-git am $open_wrt/target/linux/generic/backport-5.15/894-v6.8-net-ethtool-implement-ethtool_puts.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/005-v5.17-01-Kbuild-use-Wdeclaration-after-statement.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/005-v5.17-02-Kbuild-move-to-std-gnu11.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/005-v5.17-03-Kbuild-use-std-gnu11-for-KBUILD_USERCFLAGS.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-01-mm-x86-arm64-add-arch_has_hw_pte_young.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-02-mm-x86-add-CONFIG_ARCH_HAS_NONLEAF_PMD_YOUNG.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-03-mm-vmscan.c-refactor-shrink_node.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-04-Revert-include-linux-mm_inline.h-fold-__update_lru_s.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-05-mm-multi-gen-LRU-groundwork.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-06-mm-multi-gen-LRU-minimal-implementation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-07-mm-multi-gen-LRU-exploit-locality-in-rmap.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-08-mm-multi-gen-LRU-support-page-table-walks.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-09-mm-multi-gen-LRU-optimize-multiple-memcgs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-10-mm-multi-gen-LRU-kill-switch.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-11-mm-multi-gen-LRU-thrashing-prevention.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-12-mm-multi-gen-LRU-debugfs-interface.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-13-mm-mglru-don-t-sync-disk-for-each-aging-cycle.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-14-mm-multi-gen-LRU-retry-pages-written-back-while-isol.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-15-mm-multi-gen-LRU-move-lru_gen_add_mm-out-of-IRQ-off-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-17-mm-add-dummy-pmd_young-for-architectures-not-having-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.1-18-mm-introduce-arch_has_hw_nonleaf_pmd_young.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.2-16-mm-multi-gen-LRU-fix-crash-during-cgroup-migration.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-19-mm-add-vma_has_recency.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-20-mm-support-POSIX_FADV_NOREUSE.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-21-mm-multi-gen-LRU-rename-lru_gen_struct-to-lru_gen_pa.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-22-mm-multi-gen-LRU-rename-lrugen-lists-to-lrugen-pages.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-23-mm-multi-gen-LRU-remove-eviction-fairness-safeguard.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-24-mm-multi-gen-LRU-remove-aging-fairness-safeguard.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-25-mm-multi-gen-LRU-shuffle-should_run_aging.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-26-mm-multi-gen-LRU-per-node-lru_gen_page-lists.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-27-mm-multi-gen-LRU-clarify-scan_control-flags.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-28-mm-multi-gen-LRU-simplify-arch_has_hw_pte_young-chec.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/020-v6.3-29-mm-multi-gen-LRU-avoid-futile-retries.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-00-MIPS-uasm-Enable-muhu-opcode-for-MIPS-R6.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-01-mips-uasm-Add-workaround-for-Loongson-2F-nop-CPU-err.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-02-mips-bpf-Add-eBPF-JIT-for-32-bit-MIPS.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-03-mips-bpf-Add-new-eBPF-JIT-for-64-bit-MIPS.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-04-mips-bpf-Add-JIT-workarounds-for-CPU-errata.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-05-mips-bpf-Enable-eBPF-JITs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/050-v5.16-06-mips-bpf-Remove-old-BPF-JIT-implementations.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/060-v5.18-01-bpf-selftests-Add-helpers-to-directly-use-the-capget.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/060-v5.18-02-bpf-selftests-Remove-libcap-usage-from-test_verifier.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/060-v5.18-03-bpf-selftests-Remove-libcap-usage-from-test_progs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/080-v5.17-clk-gate-Add-devm_clk_hw_register_gate.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/100-v5.18-tty-serial-bcm63xx-use-more-precise-Kconfig-symbol.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/200-v5.18-tools-resolve_btfids-Build-with-host-flags.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/201-v5.16-scripts-dtc-Update-to-upstream-version-v1.6.1-19-g0a.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/300-v5.18-pinctrl-qcom-Return--EINVAL-for-setting-affinity-if-no-IRQ-parent.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/301-v5.16-soc-qcom-smem-Support-reserved-memory-description.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/302-v5.16-watchdog-bcm63xx_wdt-fix-fallthrough-warning.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/330-v5.16-01-MIPS-kernel-proc-add-CPU-option-reporting.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/330-v5.16-02-MIPS-Fix-using-smp_processor_id-in-preemptible-in-sh.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/331-v5.19-mtd-spinand-Add-support-for-XTX-XT26G0xA.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/344-v5.18-01-phy-marvell-phy-mvebu-a3700-comphy-Remove-port-from-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/344-v5.18-02-phy-marvell-phy-mvebu-a3700-comphy-Add-native-kernel.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/345-v5.17-arm64-dts-marvell-armada-37xx-Add-xtal-clock-to-comp.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/346-v5.18-01-Revert-ata-ahci-mvebu-Make-SATA-PHY-optional-for-Arm.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/346-v5.18-02-Revert-usb-host-xhci-mvebu-make-USB-3.0-PHY-optional.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/346-v5.18-03-Revert-PCI-aardvark-Fix-initialization-with-old-Marv.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/347-v6.0-phy-marvell-phy-mvebu-a3700-comphy-Remove-broken-res.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/350-v5.18-regmap-add-configurable-downshift-for-addresses.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/351-v5.18-regmap-allow-a-defined-reg_base-to-be-added-to-every.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/352-v6.3-regmap-apply-reg_base-and-reg_downshift-for-single-r.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/400-v5.19-mtd-call-of_platform_populate-for-MTD-partitions.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/401-v6.0-mtd-parsers-add-support-for-Sercomm-partitions.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/402-v6.0-mtd-next-mtd-core-introduce-of-support-for-dynamic-partitions.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/403-v6.1-mtd-allow-getting-MTD-device-associated-with-a-speci.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/404-v6.0-mtd-core-check-partition-before-dereference.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/405-v6.1-mtd-core-add-missing-of_node_get-in-dynamic-partitio.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/406-v6.2-0001-mtd-core-simplify-a-bit-code-find-partition-matching.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/406-v6.2-0002-mtd-core-try-to-find-OF-node-for-every-MTD-partition.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/407-v5.17-mtd-parsers-qcom-Don-t-print-error-message-on-EPROBE.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/408-v6.2-mtd-core-set-ROOT_DEV-for-partitions-marked-as-rootf.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/410-v5.18-mtd-parsers-trx-allow-to-use-on-MediaTek-MIPS-SoCs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-02-mtd-spinand-gigadevice-add-support-for-GD5FxGQ4xExxG.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-03-mtd-spinand-gigadevice-add-support-for-GD5F1GQ5RExxG.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-04-mtd-spinand-gigadevice-add-support-for-GD5F-2-4-GQ5x.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/420-v5.19-05-mtd-spinand-gigadevice-add-support-for-GD5FxGM7xExxG.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/421-v6.2-mtd-parsers-add-TP-Link-SafeLoader-partitions-table-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/422-v5.19-mtd-spi-nor-support-eon-en25qh256a.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0001-mtd-track-maximum-number-of-bitflips-for-each-read-r.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0002-mtd-always-initialize-stats-in-struct-mtd_oob_ops.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0003-mtd-add-ECC-error-accounting-for-each-read-request.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/423-v6.1-0004-mtdchar-add-MEMREAD-ioctl.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/423-v6.3-mtd-spinand-macronix-use-scratch-buffer-for-DMA-oper.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/424-v6.4-0004-mtd-core-prepare-mtd_otp_nvmem_add-to-handle-EPROBE_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/600-v5.18-page_pool-Add-allocation-stats.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/601-v5.18-page_pool-Add-recycle-stats.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/602-v5.18-page_pool-Add-function-to-batch-and-return-stats.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/603-v5.19-page_pool-Add-recycle-stats-to-page_pool_put_page_bu.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/604-v5.19-net-page_pool-introduce-ethtool-stats.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/605-v5.18-xdp-introduce-flags-field-in-xdp_buff-xdp_frame.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/606-v5.18-xdp-add-frags-support-to-xdp_return_-buff-frame.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/607-v5.18-net-skbuff-add-size-metadata-to-skb_shared_info-for-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/608-v5.18-net-veth-Account-total-xdp_frame-len-running-ndo_xdp.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/609-v5.18-veth-Allow-jumbo-frames-in-xdp-mode.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/611-v6.3-net-add-helper-eth_addr_add.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/700-v5.17-net-dsa-introduce-tagger-owned-storage-for-private.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/701-v5.17-dsa-make-tagging-protocols-connect-to-individual-switches.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-00-net-ethernet-mtk_eth_soc-add-support-for-coherent-DM.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-02-net-ethernet-mtk_eth_soc-add-support-for-Wireless-Et.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-03-net-ethernet-mtk_eth_soc-implement-flow-offloading-t.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-05-net-ethernet-mtk_eth_soc-add-ipv6-flow-offload-suppo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-06-net-ethernet-mtk_eth_soc-support-TC_SETUP_BLOCK-for-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-07-net-ethernet-mtk_eth_soc-allocate-struct-mtk_ppe-sep.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-08-net-ethernet-mtk_eth_soc-rework-hardware-flow-table-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-09-net-ethernet-mtk_eth_soc-remove-bridge-flow-offload-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-10-net-ethernet-mtk_eth_soc-support-creating-mac-addres.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-11-net-ethernet-mtk_eth_soc-wed-fix-sparse-endian-warni.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-12-net-ethernet-mtk_eth_soc-fix-return-value-check-in-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-13-net-ethernet-mtk_eth_soc-use-standard-property-for-c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-14-net-ethernet-mtk_eth_soc-use-after-free-in-__mtk_ppe.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-15-net-ethernet-mtk_eth_soc-add-check-for-allocation-fa.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-16-eth-mtk_eth_soc-silence-the-GCC-12-array-bounds-warn.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-17-net-ethernet-mtk_eth_soc-rely-on-GFP_KERNEL-for-dma_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-18-net-ethernet-mtk_eth_soc-move-tx-dma-desc-configurat.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-19-net-ethernet-mtk_eth_soc-add-txd_size-to-mtk_soc_dat.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-20-net-ethernet-mtk_eth_soc-rely-on-txd_size-in-mtk_tx_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-21-net-ethernet-mtk_eth_soc-rely-on-txd_size-in-mtk_des.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-22-net-ethernet-mtk_eth_soc-rely-on-txd_size-in-txd_to_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-23-net-ethernet-mtk_eth_soc-add-rxd_size-to-mtk_soc_dat.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-24-net-ethernet-mtk_eth_soc-rely-on-txd_size-field-in-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-25-net-ethernet-mtk_eth_soc-rely-on-rxd_size-field-in-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-26-net-ethernet-mtk_eth_soc-introduce-device-register-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-27-net-ethernet-mtk_eth_soc-introduce-MTK_NETSYS_V2-sup.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-28-net-ethernet-mtk_eth_soc-convert-ring-dma-pointer-to.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-29-net-ethernet-mtk_eth_soc-convert-scratch_ring-pointe.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-30-net-ethernet-mtk_eth_soc-introduce-support-for-mt798.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-31-net-ethernet-mtk_eth_soc-fix-error-code-in-mtk_flow_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-33-net-ethernet-mtk_eth_soc-enable-rx-cksum-offload-for.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/702-v5.19-34-eth-mtk_ppe-fix-up-after-merge.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-00-v5.16-net-convert-users-of-bitmap_foo-to-linkmode_foo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-01-v5.16-net-phylink-add-MAC-phy_interface_t-bitmap.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-02-v5.16-net-phylink-use-supported_interfaces-for-phylink-val.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-03-v5.16-net-dsa-populate-supported_interfaces-member.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-04-v5.17-net-dsa-consolidate-phylink-creation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-05-v5.17-net-dsa-replace-phylink_get_interfaces-with-phylink_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-06-v5.18-net-dsa-add-support-for-phylink-mac_select_pcs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-07-v5.16-net-phy-add-phy_interface_t-bitmap-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-08-v5.17-net-phylink-add-mac_select_pcs-method-to-phylink_mac.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-09-v5.17-net-phylink-add-generic-validate-implementation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-11-v5.17-net-phylink-add-pcs_validate-method.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-12-v5.17-net-phylink-add-legacy_pre_march2020-indicator.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-13-v5.17-net-dsa-mark-DSA-phylink-as-legacy_pre_march2020.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-14-v5.17-net-phylink-use-legacy_pre_march2020.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-15-v5.18-net-phy-phylink-fix-DSA-mac_select_pcs-introduction.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-16-v5.16-net-mvneta-populate-supported_interfaces-member.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-17-v5.16-net-mvneta-remove-interface-checks-in-mvneta_validat.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-18-v5.16-net-mvneta-drop-use-of-phylink_helper_basex_speed.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-19-v5.17-net-mvneta-use-phylink_generic_validate.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/703-20-v5.17-net-mvneta-mark-as-a-legacy_pre_march2020-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-01-v5.17-net-mtk_eth_soc-populate-supported_interfaces-member.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-02-v5.17-net-mtk_eth_soc-remove-interface-checks-in-mtk_valid.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-03-v5.17-net-mtk_eth_soc-drop-use-of-phylink_helper_basex_spe.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-04-v5.17-net-mtk_eth_soc-use-phylink_generic_validate.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-05-v5.17-net-mtk_eth_soc-mark-as-a-legacy_pre_march2020-drive.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-06-v5.19-eth-mtk_eth_soc-remove-a-copy-of-the-NAPI_POLL_WEIGH.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-07-v5.19-mtk_eth_soc-remove-unused-mac-mode.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-08-v5.19-net-mtk_eth_soc-remove-unused-sgmii-flags.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-09-v5.19-net-mtk_eth_soc-add-mask-and-update-PCS-speed-defini.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-10-v5.19-net-mtk_eth_soc-correct-802.3z-speed-setting.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-11-v5.19-net-mtk_eth_soc-correct-802.3z-duplex-setting.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-12-v5.19-net-mtk_eth_soc-stop-passing-phylink-state-to-sgmii-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-13-v5.19-net-mtk_eth_soc-provide-mtk_sgmii_config.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-14-v5.19-net-mtk_eth_soc-add-fixme-comment-for-state-speed-us.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-16-v5.19-net-mtk_eth_soc-move-restoration-of-SYSCFG0-to-mac_f.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-17-v5.19-net-mtk_eth_soc-convert-code-structure-to-suit-split.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/704-18-v5.19-net-mtk_eth_soc-partially-convert-to-phylink_pcs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-01-v5.17-net-dsa-mt7530-iterate-using-dsa_switch_for_each_use.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-02-v5.19-net-dsa-mt7530-populate-supported_interfaces-and-mac.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-03-v5.19-net-dsa-mt7530-remove-interface-checks.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-04-v5.19-net-dsa-mt7530-drop-use-of-phylink_helper_basex_spee.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-05-v5.19-net-dsa-mt7530-only-indicate-linkmodes-that-can-be-s.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-06-v5.19-net-dsa-mt7530-switch-to-use-phylink_get_linkmodes.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-07-v5.19-net-dsa-mt7530-partially-convert-to-phylink_pcs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-08-v5.19-net-dsa-mt7530-move-autoneg-handling-to-PCS-validati.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-09-v5.19-net-dsa-mt7530-mark-as-non-legacy.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-10-v5.19-net-dsa-mt753x-fix-pcs-conversion-regression.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-11-v6.0-net-dsa-mt7530-rework-mt7530_hw_vlan_-add-del.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/705-13-v6.0-net-dsa-mt7530-get-cpu-port-via-dp-cpu_dp-instead-of.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/706-00-v6.0-net-ethernet-mtk_eth_soc-rely-on-page_pool-for-singl.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/706-01-v6.0-net-ethernet-mtk_eth_soc-add-basic-XDP-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/706-02-v6.0-net-ethernet-mtk_eth_soc-introduce-xdp-ethtool-count.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/706-03-v6.0-net-ethernet-mtk_eth_soc-add-xmit-XDP-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/706-04-v6.0-net-ethernet-mtk_eth_soc-add-support-for-page_pool_g.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/706-05-v6.0-net-ethernet-mtk_eth_soc-introduce-mtk_xdp_frame_map.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/706-06-v6.0-net-ethernet-mtk_eth_soc-introduce-xdp-multi-frag-su.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/707-v6.3-net-pcs-add-driver-for-MediaTek-SGMII-PCS.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/708-01-v5.16-net-mvneta-Delete-unused-variable.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/708-02-v6.3-net-mvneta-fix-potential-double-frees-in-mvneta_txq_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/710-v6.0-net-ethernet-mtk_eth_soc-fix-hw-hash-reporting-for-M.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-01-net-ethernet-mtk_eth_soc-fix-off-by-one-check-of-ARR.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-02-net-ethernet-mtk_ppe-fix-possible-NULL-pointer-deref.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-03-net-ethernet-mtk-ppe-fix-traffic-offload-with-bridge.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/711-v6.0-04-net-ethernet-mtk_eth_soc-remove-mtk_foe_entry_timest.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/712-v6.0-net-ethernet-mtk_eth_soc-enable-XDP-support-just-for.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/713-v6.0-net-ethernet-mtk_eth_soc-move-gdma_to_ppe-and-ppe_ba.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/714-v6.0-net-ethernet-mtk_eth_soc-move-ppe-table-hash-offset-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/715-v6.0-net-ethernet-mtk_eth_soc-add-the-capability-to-run-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/716-v6.0-net-ethernet-mtk_eth_soc-move-wdma_base-definitions-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/717-v6.0-net-ethernet-mtk_eth_soc-add-foe_entry_size-to-mtk_e.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/718-v6.0-net-ethernet-mtk_eth_soc-fix-typo-in-__mtk_foe_entry.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/719-v6.0-net-ethernet-mtk_eth_soc-check-max-allowed-value-in-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/720-v6.0-net-ethernet-mtk_eth_wed-add-mtk_wed_configure_irq-a.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/721-v6.0-net-ethernet-mtk_eth_wed-add-wed-support-for-mt7986-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/722-v6.0-net-ethernet-mtk_eth_wed-add-axi-bus-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/723-v6.0-net-ethernet-mtk_eth_soc-introduce-flow-offloading-s.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/724-v6.0-net-ethernet-mtk_eth_soc-enable-flow-offloading-supp.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/724-v6.0-net-ethernet-mtk_eth_soc-fix-wrong-use-of-new-helper.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/725-v6.0-net-ethernet-mtk_eth_soc-fix-usage-of-foe_entry_size.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/726-v6.0-net-ethernet-mtk_eth_soc-fix-mask-of-RX_DMA_GET_SPOR.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/727-v6.1-net-ethernet-mtk_eth_soc-fix-state-in-__mtk_foe_entr.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-01-net-ethernet-mtk_eth_soc-fix-possible-memory-leak-in.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-02-net-ethernet-mtk_eth_wed-add-missing-put_device-in-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-03-net-ethernet-mtk_eth_wed-add-missing-of_node_put.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-04-net-ethernet-mtk_eth_soc-fix-resource-leak-in-error-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/728-v6.1-05-net-ethernet-mtk_eth_soc-fix-memory-leak-in-error-pa.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-01-v6.1-net-ethernet-mtk_wed-introduce-wed-mcu-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-02-v6.1-net-ethernet-mtk_wed-introduce-wed-wo-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-03-v6.1-net-ethernet-mtk_wed-rename-tx_wdma-array-in-rx_wdma.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-04-v6.1-net-ethernet-mtk_wed-add-configure-wed-wo-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-05-v6.1-net-ethernet-mtk_wed-add-rx-mib-counters.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-06-v6.1-net-ethernet-mtk_eth_soc-do-not-overwrite-mtu-config.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-07-v6.1-net-ethernet-mtk_eth_soc-remove-cpu_relax-in-mtk_pen.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-08-v6.2-net-ethernet-mtk_eth_soc-fix-RSTCTRL_PPE-0-1-definit.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-09-v6.2-net-ethernet-mtk_wed-add-wcid-overwritten-support-fo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-10-v6.2-net-ethernet-mtk_wed-return-status-value-in-mtk_wdma.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-11-v6.2-net-ethernet-mtk_wed-move-MTK_WDMA_RESET_IDX_TX-conf.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-12-v6.2-net-ethernet-mtk_wed-update-mtk_wed_stop.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-13-v6.2-net-ethernet-mtk_wed-add-mtk_wed_rx_reset-routine.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-14-v6.2-net-ethernet-mtk_wed-add-reset-to-tx_ring_setup-call.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-15-v6.2-net-ethernet-mtk_wed-fix-sleep-while-atomic-in-mtk_w.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-16-v6.3-net-ethernet-mtk_wed-get-rid-of-queue-lock-for-rx-qu.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-17-v6.3-net-ethernet-mtk_wed-get-rid-of-queue-lock-for-tx-qu.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-18-v6.3-net-ethernet-mtk_eth_soc-introduce-mtk_hw_reset-util.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-19-v6.3-net-ethernet-mtk_eth_soc-introduce-mtk_hw_warm_reset.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-20-v6.3-net-ethernet-mtk_eth_soc-align-reset-procedure-to-ve.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-21-v6.3-net-ethernet-mtk_eth_soc-add-dma-checks-to-mtk_hw_re.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-22-v6.3-net-ethernet-mtk_wed-add-reset-reset_complete-callba.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/729-23-v6.3-net-ethernet-mtk_wed-add-reset-to-rx_ring_setup-call.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-01-v6.3-net-ethernet-mtk_eth_soc-account-for-vlan-in-rx-head.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-02-v6.3-net-ethernet-mtk_eth_soc-increase-tx-ring-side-for-Q.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-03-v6.3-net-ethernet-mtk_eth_soc-avoid-port_mg-assignment-on.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-04-v6.3-net-ethernet-mtk_eth_soc-implement-multi-queue-suppo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-05-v6.3-net-dsa-tag_mtk-assign-per-port-queues.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-06-v6.3-net-ethernet-mediatek-ppe-assign-per-port-queues-for.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-08-v6.3-net-dsa-add-support-for-DSA-rx-offloading-via-metada.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-09-v6.3-net-ethernet-mtk_eth_soc-fix-VLAN-rx-hardware-accele.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-10-v6.3-net-ethernet-mtk_eth_soc-drop-packets-to-WDMA-if-the.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-12-v6.3-net-ethernet-mtk_eth_soc-disable-hardware-DSA-untagg.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-13-v6.3-net-ethernet-mtk_eth_soc-enable-special-tag-when-any.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-14-v6.3-net-ethernet-mtk_eth_soc-fix-DSA-TX-tag-hwaccel-for-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-15-v6.3-net-ethernet-mtk_wed-No-need-to-clear-memory-after-a.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-16-v6.3-net-ethernet-mtk_wed-fix-some-possible-NULL-pointer-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-17-v6.3-net-ethernet-mtk_wed-fix-possible-deadlock-if-mtk_we.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/730-18-v6.3-net-ethernet-mtk_eth_soc-fix-tx-throughput-regressio.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0001-net-phy-Introduce-QUSGMII-PHY-mode.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0002-net-phy-Add-helper-to-derive-the-number-of-ports-fro.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0003-net-phy-Add-1000BASE-KX-interface-mode.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/731-v6.1-0004-net-phy-Add-support-for-rate-matching.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-01-net-ethernet-mtk_eth_soc-Avoid-truncating-allocation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-02-net-mtk_eth_soc-add-definitions-for-PCS.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-03-net-mtk_eth_soc-eliminate-unnecessary-error-handling.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-04-net-mtk_eth_soc-add-pcs_get_state-implementation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-05-net-mtk_eth_soc-convert-mtk_sgmii-to-use-regmap_upda.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-06-net-mtk_eth_soc-add-out-of-band-forcing-of-speed-and.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-07-net-mtk_eth_soc-move-PHY-power-up.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-08-net-mtk_eth_soc-move-interface-speed-selection.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-09-net-mtk_eth_soc-add-advertisement-programming.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-10-net-mtk_eth_soc-move-and-correct-link-timer-programm.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-11-net-mtk_eth_soc-add-support-for-in-band-802.3z-negot.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-12-net-mediatek-sgmii-ensure-the-SGMII-PHY-is-powered-d.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-13-net-mediatek-sgmii-fix-duplex-configuration.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.2-14-mtk_sgmii-enable-PCS-polling-to-allow-SFP-work.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-15-net-ethernet-mtk_eth_soc-reset-PCS-state.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-16-net-ethernet-mtk_eth_soc-only-write-values-if-needed.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-18-net-ethernet-mtk_eth_soc-add-support-for-MT7981.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-19-net-ethernet-mtk_eth_soc-set-MDIO-bus-clock-frequenc.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-20-net-ethernet-mtk_eth_soc-switch-to-external-PCS-driv.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.3-21-net-ethernet-mtk_eth_soc-add-missing-ppe-cache-flush.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-22-net-mtk_eth_soc-use-WO-firmware-for-MT7981.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-23-net-ethernet-mtk_eth_soc-fix-NULL-pointer-dereferenc.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-24-net-ethernet-mtk_eth_soc-ppe-add-support-for-flow-ac.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-25-net-ethernet-mediatek-fix-ppe-flow-accounting-for-v1.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.4-26-net-ethernet-mtk_eth_soc-drop-generic-vlan-rx-offloa.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/733-v6.5-27-net-ethernet-mtk_eth_soc-always-mtk_get_ib1_pkt_type.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/734-v5.16-0001-net-bgmac-improve-handling-PHY.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/734-v5.16-0002-net-bgmac-support-MDIO-described-in-DT.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/734-v6.8-net-phy-bcm54612e-add-suspend-resume.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/735-v6.0-0001-net-phy-Add-support-for-AQR113C-EPHY.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/736-v6.1-0001-net-phy-aquantia-Add-some-additional-phy-interfaces.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/736-v6.1-0002-net-phy-aquantia-Add-support-for-rate-matching.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/737-01-v6.7-net-phy-aquantia-move-to-separate-directory.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/737-02-v6.7-net-phy-aquantia-move-MMD_VEND-define-to-header.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/737-03-v6.7-net-phy-aquantia-add-firmware-load-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/742-v5.16-net-phy-at803x-add-support-for-qca-8327-internal-phy.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0001-net-dsa-b53-Include-all-ports-in-enabled_ports.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0002-net-dsa-b53-Drop-BCM5301x-workaround-for-a-wrong-CPU.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0003-net-dsa-b53-Improve-flow-control-setup-on-BCM5301x.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/743-v5.16-0004-net-dsa-b53-Drop-unused-cpu_port-field.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/745-v5.16-01-net-phy-at803x-add-support-for-qca-8327-A-variant.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/745-v5.16-02-net-phy-at803x-add-resume-suspend-function-to-qca83x.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/745-v5.16-03-net-phy-at803x-fix-spacing-and-improve-name-for-83xx.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-01-net-phy-at803x-fix-resume-for-QCA8327-phy.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-02-net-phy-at803x-add-DAC-amplitude-fix-for-8327-phy.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-03-net-phy-at803x-enable-prefer-master-for-83xx-interna.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/746-v5.16-04-net-phy-at803x-better-describe-debug-regs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-01-dsa-qca8k-add-mac-power-sel-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-02-dt-bindings-net-dsa-qca8k-Add-SGMII-clock-phase-prop.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-03-net-dsa-qca8k-add-support-for-sgmii-falling-edge.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-04-dt-bindings-net-dsa-qca8k-Document-support-for-CPU-p.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-05-net-dsa-qca8k-add-support-for-cpu-port-6.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-06-net-dsa-qca8k-rework-rgmii-delay-logic-and-scan-for-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-07-dt-bindings-net-dsa-qca8k-Document-qca-sgmii-enable-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-08-net-dsa-qca8k-add-explicit-SGMII-PLL-enable.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-09-dt-bindings-net-dsa-qca8k-Document-qca-led-open-drai.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-10-net-dsa-qca8k-add-support-for-pws-config-reg.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-11-dt-bindings-net-dsa-qca8k-document-support-for-qca83.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-12-net-dsa-qca8k-add-support-for-QCA8328.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-13-net-dsa-qca8k-set-internal-delay-also-for-sgmii.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-14-net-dsa-qca8k-move-port-config-to-dedicated-struct.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-15-dt-bindings-net-ipq8064-mdio-fix-warning-with-new-qc.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/747-v5.16-16-dt-bindings-net-dsa-qca8k-convert-to-YAML-schema.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/748-v5.16-net-dsa-qca8k-fix-delay-applied-to-wrong-cpu-in-parse-p.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/749-v5.16-net-dsa-qca8k-tidy-for-loop-in-setup-and-add-cpu-port-c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v5.16-net-dsa-qca8k-make-sure-pad0-mac06-exchange-is-disabled.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-01-net-ethernet-mtk_ppe-add-MTK_FOE_ENTRY_V-1-2-_SIZE-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-02-net-ethernet-mtk_eth_soc-remove-incorrect-PLL-config.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-03-net-ethernet-mtk_eth_soc-remove-mac_pcs_get_state-an.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-05-net-ethernet-mtk_eth_soc-add-version-in-mtk_soc_data.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-06-net-ethernet-mtk_eth_soc-increase-MAX_DEVS-to-3.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-07-net-ethernet-mtk_eth_soc-rely-on-MTK_MAX_DEVS-and-re.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-08-net-ethernet-mtk_eth_soc-add-NETSYS_V3-version-suppo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-09-net-ethernet-mtk_eth_soc-convert-caps-in-mtk_soc_dat.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-10-net-ethernet-mtk_eth_soc-convert-clock-bitmap-to-u64.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-11-net-ethernet-mtk_eth_soc-add-basic-support-for-MT798.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-12-net-ethernet-mtk_eth_soc-enable-page_pool-support-fo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-13-net-ethernet-mtk_eth_soc-enable-nft-hw-flowtable_off.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-14-net-ethernet-mtk_eth_soc-support-per-flow-accounting.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-15-net-ethernet-mtk_eth_soc-fix-NULL-pointer-on-hw-rese.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-16-net-ethernet-mtk_eth_soc-fix-register-definitions-fo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-17-net-ethernet-mtk_eth_soc-add-reset-bits-for-MT7988.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-18-net-ethernet-mtk_eth_soc-add-support-for-in-SoC-SRAM.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/750-v6.5-19-net-ethernet-mtk_eth_soc-support-36-bit-DMA-addressi.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/751-00a-STABLE-net-ethernet-mediatek-split-tx-and-rx-fields-in-mtk_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/751-00b-net-ethernet-mediatek-use-QDMA-instead-of-ADMAv2-on-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/751-01-v6.4-net-ethernet-mtk_eth_soc-add-code-for-offloading-flo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/751-02-v6.4-net-ethernet-mediatek-mtk_ppe-prefer-newly-added-l2-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/751-03-v6.4-net-ethernet-mtk_eth_soc-improve-keeping-track-of-of.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/751-04-v6.4-net-ethernet-mediatek-fix-ppe-flow-accounting-for-L2.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-01-v6.6-net-ethernet-mtk_wed-add-some-more-info-in-wed_txinf.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-02-v6.6-net-ethernet-mtk_wed-minor-change-in-wed_-tx-rx-info.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-03-v6.6-net-ethernet-mtk_eth_soc-rely-on-mtk_pse_port-defini.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-04-v6.6-net-ethernet-mtk_wed-check-update_wo_rx_stats-in-mtk.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-05-v6.7-net-ethernet-mtk_wed-do-not-assume-offload-callbacks.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-06-v6.7-net-ethernet-mtk_wed-introduce-versioning-utility-ro.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-07-v6.7-net-ethernet-mtk_wed-do-not-configure-rx-offload-if-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-08-v6.7-net-ethernet-mtk_wed-rename-mtk_rxbm_desc-in-mtk_wed.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-09-v6.7-net-ethernet-mtk_wed-introduce-mtk_wed_buf-structure.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-10-v6.7-net-ethernet-mtk_wed-move-mem_region-array-out-of-mt.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-11-v6.7-net-ethernet-mtk_wed-make-memory-region-optional.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-12-v6.7-net-ethernet-mtk_wed-fix-EXT_INT_STATUS_RX_FBUF-defi.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-13-v6.7-net-ethernet-mtk_wed-add-mtk_wed_soc_data-structure.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-14-v6.7-net-ethernet-mtk_wed-introduce-WED-support-for-MT798.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-15-v6.7-net-ethernet-mtk_wed-refactor-mtk_wed_check_wfdma_rx.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-16-v6.7-net-ethernet-mtk_wed-introduce-partial-AMSDU-offload.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-17-v6.7-net-ethernet-mtk_wed-introduce-hw_rro-support-for-MT.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-18-v6.7-net-ethernet-mtk_wed-debugfs-move-wed_v2-specific-re.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-19-v6.7-net-ethernet-mtk_wed-debugfs-add-WED-3.0-debugfs-ent.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-20-v6.7-net-ethernet-mtk_wed-add-wed-3.0-reset-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/752-24-v6.8-net-ethernet-mtk_wed-add-support-for-devices-with-mo.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/753-v6.9-net-ethernet-mtk_eth_soc-fix-WED-wifi-reset.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/754-25-v6.10-net-ethernet-mtk_eth_soc-handle-dma-buffer-size-soc-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/754-29-v6.10-net-ethernet-mtk_ppe-Change-PPE-entries-number-to-16.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/754-30-v6.10-net-ethernet-mtk_eth_soc-implement-.-get-set-_pausep.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-01-v5.16-net-dsa-qca8k-fix-internal-delay-applied-to-the-wrong-PAD.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-02-v5.16-net-dsa-qca8k-fix-MTU-calculation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-03-v5.17-net-next-net-dsa-qca8k-remove-redundant-check-in-parse_port_config.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-04-v5.17-net-next-net-dsa-qca8k-convert-to-GENMASK_FIELD_PREP_FIELD_GET.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-05-v5.17-net-next-net-dsa-qca8k-remove-extra-mutex_init-in-qca8k_setup.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-06-v5.17-net-next-net-dsa-qca8k-move-regmap-init-in-probe-and-set-it.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-07-v5.17-net-next-net-dsa-qca8k-initial-conversion-to-regmap-heper.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-08-v5.17-net-next-net-dsa-qca8k-add-additional-MIB-counter-and-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-09-v5.17-net-next-net-dsa-qca8k-add-support-for-port-fast-aging.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-10-v5.17-net-next-net-dsa-qca8k-add-set_ageing_time-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-11-v5.17-net-next-net-dsa-qca8k-add-support-for-mdb_add-del.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-12-v5.17-net-next-net-dsa-qca8k-add-support-for-mirror-mode.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-13-v5.17-net-next-net-dsa-qca8k-add-LAG-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/764-14-v5.17-net-next-net-dsa-qca8k-fix-warning-in-LAG-feature.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-01-net-next-net-dsa-reorder-PHY-initialization-with-MTU-setup-in.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-02-net-next-net-dsa-merge-rtnl_lock-sections-in-dsa_slave_create.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-03-net-next-net-dsa-stop-updating-master-MTU-from-master.c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-04-net-next-net-dsa-hold-rtnl_mutex-when-calling-dsa_master_-set.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-05-net-next-net-dsa-first-set-up-shared-ports-then-non-shared-po.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/765-v5.17-06-net-next-net-dsa-setup-master-before-ports.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-01-net-dsa-provide-switch-operations-for-tracking-the-m.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-02-net-dsa-replay-master-state-events-in-dsa_tree_-setu.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-03-net-dsa-tag_qca-convert-to-FIELD-macro.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-04-net-dsa-tag_qca-move-define-to-include-linux-dsa.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-05-net-dsa-tag_qca-enable-promisc_on_master-flag.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-06-net-dsa-tag_qca-add-define-for-handling-mgmt-Etherne.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-07-net-dsa-tag_qca-add-define-for-handling-MIB-packet.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-08-net-dsa-tag_qca-add-support-for-handling-mgmt-and-MI.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-09-net-dsa-qca8k-add-tracking-state-of-master-port.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-10-net-dsa-qca8k-add-support-for-mgmt-read-write-in-Eth.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-11-net-dsa-qca8k-add-support-for-mib-autocast-in-Ethern.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-12-net-dsa-qca8k-add-support-for-phy-read-write-with-mg.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-13-net-dsa-qca8k-move-page-cache-to-driver-priv.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-14-net-dsa-qca8k-cache-lo-and-hi-for-mdio-write.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-15-net-dsa-qca8k-add-support-for-larger-read-write-size.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/766-v5.18-16-net-dsa-qca8k-introduce-qca8k_bulk_read-write-functi.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/767-v5.18-net-dsa-qca8k-check-correct-variable-in-qca8k_phy_et.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/768-v5.18-net-dsa-qca8k-fix-noderef.cocci-warnings.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-01-net-dsa-qca8k-drop-MTU-tracking-from-qca8k_priv.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-02-net-dsa-qca8k-drop-port_sts-from-qca8k_priv.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-03-net-dsa-qca8k-rework-and-simplify-mdiobus-logic.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-04-net-dsa-qca8k-drop-dsa_switch_ops-from-qca8k_priv.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-05-net-dsa-qca8k-correctly-handle-mdio-read-error.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/769-v5.19-06-net-dsa-qca8k-unify-bus-id-naming-with-legacy-and-OF.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/770-v6.0-net-dsa-qca8k-move-driver-to-qca-dir.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-01-net-dsa-qca8k-cache-match-data-to-speed-up-access.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-02-net-dsa-qca8k-make-mib-autocast-feature-optional.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-03-net-dsa-qca8k-move-mib-struct-to-common-code.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-04-net-dsa-qca8k-move-qca8k-read-write-rmw-and-reg-tabl.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-05-net-dsa-qca8k-move-qca8k-bulk-read-write-helper-to-c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-06-net-dsa-qca8k-move-mib-init-function-to-common-code.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-07-net-dsa-qca8k-move-port-set-status-eee-ethtool-stats.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-08-net-dsa-qca8k-move-bridge-functions-to-common-code.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-09-net-dsa-qca8k-move-set-age-MTU-port-enable-disable-f.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-10-net-dsa-qca8k-move-port-FDB-MDB-function-to-common-c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-11-net-dsa-qca8k-move-port-mirror-functions-to-common-c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-12-net-dsa-qca8k-move-port-VLAN-functions-to-common-cod.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-13-net-dsa-qca8k-move-port-LAG-functions-to-common-code.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/771-v6.0-14-net-dsa-qca8k-move-read_switch_id-function-to-common.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/772-v6.0-net-dsa-qca8k-fix-NULL-pointer-dereference-for-of_de.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/773-v5.18-1-net-dsa-Move-VLAN-filtering-syncing-out-of-dsa_switc.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/773-v5.18-2-net-dsa-Avoid-cross-chip-syncing-of-VLAN-filtering.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-01-net-dsa-rtl8366rb-Support-bridge-offloading.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-02-net-dsa-rtl8366-Drop-custom-VLAN-set-up.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-03-net-dsa-rtl8366rb-Rewrite-weird-VLAN-filering-enable.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-06-net-dsa-rtl8366-Drop-and-depromote-pointless-prints.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-07-net-dsa-rtl8366rb-Use-core-filtering-tracking.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-08-net-dsa-rtl8366rb-Support-disabling-learning.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-09-net-dsa-rtl8366rb-Support-fast-aging.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/774-v5.16-10-net-dsa-rtl8366rb-Support-setting-STP-state.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-01-net-ethernet-stmicro-stmmac-move-queue-reset-to-dedi.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-02-net-ethernet-stmicro-stmmac-first-disable-all-queues.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-03-net-ethernet-stmicro-stmmac-move-dma-conf-to-dedicat.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-04-net-ethernet-stmicro-stmmac-generate-stmmac-dma-conf.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/775-v6.0-05-net-ethernet-stmicro-stmmac-permit-MTU-change-with-i.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/776-v6.1-01-net-dsa-qca8k-fix-inband-mgmt-for-big-endian-systems.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/776-v6.1-02-net-dsa-qca8k-fix-ethtool-autocast-mib-for-big-endia.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-01-net-dsa-qca8k-fix-wrong-length-value-for-mgmt-eth-pa.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-02-net-dsa-tag_qca-fix-wrong-MGMT_DATA2-size.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-03-Revert-net-dsa-qca8k-cache-lo-and-hi-for-mdio-write.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-04-net-dsa-qca8k-introduce-single-mii-read-write-lo-hi.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/777-v6.2-05-net-dsa-qca8k-improve-mdio-master-read-write-by-usin.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-01-net-phy-at803x-add-fiber-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-02-net-phy-at803x-support-downstream-SFP-cage.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-03-net-phy-at803x-fix-NULL-pointer-dereference-on-AR9331-PHY.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/778-v5.18-04-net-phy-at803x-fix-error-return-code-in-at803x_probe.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/780-v5.16-bus-mhi-pci_generic-Introduce-Sierra-EM919X-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/781-v6.1-bus-mhi-host-always-print-detected-modem-name.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/782-v6.1-net-dsa-mt7530-add-support-for-in-band-link-status.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/783-v6.1-net-sfp-re-implement-soft-state-polling-setup.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/784-v6.1-net-sfp-move-quirk-handling-into-sfp.c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/785-v6.1-net-sfp-move-Alcatel-Lucent-3FE46541AA-fixup.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/786-v6.1-net-sfp-move-Huawei-MA5671A-fixup.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/787-v6.1-net-sfp-add-support-for-HALNy-GPON-SFP.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/788-v6.3-net-dsa-mt7530-use-external-PCS-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/789-v6.3-net-sfp-add-quirk-enabling-2500Base-x-for-HG-MXPD-48.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.0-net-mii-add-mii_bmcr_encode_fixed.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0001-net-dsa-mt7530-make-some-noise-if-register-read-fail.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0002-net-dsa-mt7530-refactor-SGMII-PCS-creation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0003-net-dsa-mt7530-use-unlocked-regmap-accessors.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0004-net-dsa-mt7530-use-regmap-to-access-switch-register-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0005-net-dsa-mt7530-move-SGMII-PCS-creation-to-mt7530_pro.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0006-net-dsa-mt7530-introduce-mutex-helpers.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0007-net-dsa-mt7530-move-p5_intf_modes-function-to-mt7530.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0008-net-dsa-mt7530-introduce-mt7530_probe_common-helper-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0009-net-dsa-mt7530-introduce-mt7530_remove_common-helper.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0011-net-dsa-mt7530-introduce-separate-MDIO-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0012-net-dsa-mt7530-skip-locking-if-MDIO-bus-isn-t-presen.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0013-net-dsa-mt7530-introduce-driver-for-MT7988-built-in-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/790-v6.4-0014-net-dsa-mt7530-fix-support-for-MT7531BE.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.2-01-net-phy-Add-driver-for-Motorcomm-yt8521-gigabit-ethernet.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.2-02-net-phy-fix-yt8521-duplicated-argument-to-or.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.2-03-net-phy-add-Motorcomm-YT8531S-phy-id.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-04-net-phy-fix-the-spelling-problem-of-Sentinel.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-05-net-phy-motorcomm-change-the-phy-id-of-yt8521-and-yt8531s.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-06-net-phy-Add-BIT-macro-for-Motorcomm-yt8521-yt8531-gigabit.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-07-net-phy-Add-dts-support-for-Motorcomm-yt8521-gigabit.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-08-net-phy-Add-dts-support-for-Motorcomm-yt8531s-gigabit.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-09-net-phy-Add-driver-for-Motorcomm-yt8531-gigabit-ethernet.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.3-10-net-phy-motorcomm-uninitialized-variables-in.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/791-v6.6-11-net-phy-motorcomm-Add-pad-drive-strength-cfg-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/792-01-v6.0-net-phylink-disable-PCS-polling-over-major-configura.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/792-02-v6.0-net-phylink-fix-NULL-pl-pcs-dereference-during-phyli.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/792-03-v6.6-net-phylink-add-pcs_enable-pcs_disable-methods.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/792-v5.16-net-dpaa2-mac-add-support-for-more-10G-modes.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/793-v6.6-net-pcs-lynxi-implement-pcs_disable-op.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/794-v6.2-net-core-Allow-live-renaming-when-an-interface-is-up.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-01-usbnet-ipheth-fix-risk-of-NULL-pointer-deallocation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-02-usbnet-ipheth-transmit-URBs-without-trailing-padding.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-03-usbnet-ipheth-add-CDC-NCM-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/796-v6.5-04-usbnet-ipheth-update-Kconfig-description.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/797-v5.17-net-usb-ax88179_178a-add-TSO-feature.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/798-net-next-net-sfp-add-quirk-for-Fiberstone-GPON-ONU-34-20BI.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/800-v6.0-0001-dt-bindings-leds-add-Broadcom-s-BCM63138-controller.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/800-v6.0-0002-leds-bcm63138-add-support-for-BCM63138-controller.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/801-v6.0-0001-dt-bindings-leds-leds-bcm63138-unify-full-stops-in-d.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/801-v6.0-0002-leds-add-help-info-about-BCM63138-module-name.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/801-v6.0-0003-leds-leds-bcm63138-get-rid-of-LED_OFF.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/802-v5.16-0001-nvmem-core-rework-nvmem-cell-instance-creation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/802-v5.16-0002-nvmem-core-add-nvmem-cell-post-processing-callback.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/802-v5.16-0003-nvmem-imx-ocotp-add-support-for-post-processing.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/803-v5.17-0002-nvmem-mtk-efuse-support-minimum-one-byte-access-stri.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0001-nvmem-core-Remove-unused-devm_nvmem_unregister.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0002-nvmem-core-Use-devm_add_action_or_reset.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0003-nvmem-core-Check-input-parameter-for-NULL-in-nvmem_u.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0004-nvmem-qfprom-fix-kerneldoc-warning.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0005-nvmem-sunxi_sid-Add-support-for-D1-variant.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0006-nvmem-meson-mx-efuse-replace-unnecessary-devm_kstrdu.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0007-nvmem-add-driver-for-Layerscape-SFP-Security-Fuse-Pr.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0008-nvmem-qfprom-Increase-fuse-blow-timeout-to-prevent-w.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0009-nvmem-Add-driver-for-OCOTP-in-Sunplus-SP7021.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/804-v5.18-0010-nvmem-brcm_nvram-parse-NVRAM-content-into-NVMEM-cell.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0001-nvmem-bcm-ocotp-mark-ACPI-device-ID-table-as-maybe-u.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0002-nvmem-sunplus-ocotp-staticize-sp_otp_v0.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0003-nvmem-sunplus-ocotp-drop-useless-probe-confirmation.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0004-nvmem-core-support-passing-DT-node-in-cell-info.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0005-nvmem-brcm_nvram-find-Device-Tree-nodes-for-NVMEM-ce.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0006-nvmem-Add-Apple-eFuse-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0007-nvmem-qfprom-using-pm_runtime_resume_and_get-instead.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0008-nvmem-sfp-Use-regmap.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/805-v5.19-0009-nvmem-sfp-Add-support-for-TA-2.1-devices.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/806-v6.0-0001-nvmem-microchip-otpc-add-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/806-v6.0-0002-nvmem-mtk-efuse-Simplify-with-devm_platform_get_and_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0002-nvmem-add-driver-handling-U-Boot-environment-variabl.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0004-nvmem-brcm_nvram-Use-kzalloc-for-allocating-only-one.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0005-nvmem-prefix-all-symbols-with-NVMEM_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0006-nvmem-sort-config-symbols-alphabetically.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0007-nvmem-u-boot-env-find-Device-Tree-nodes-for-NVMEM-ce.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0008-nvmem-lan9662-otp-add-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0009-nvmem-u-boot-env-fix-crc32-casting-type.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0010-nvmem-lan9662-otp-Fix-compatible-string.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0011-nvmem-u-boot-env-fix-crc32_data_offset-on-redundant-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/807-v6.1-0013-nvmem-lan9662-otp-Change-return-type-of-lan9662_otp_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0001-nvmem-stm32-move-STM32MP15_BSEC_NUM_LOWER-in-config.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0002-nvmem-stm32-add-warning-when-upper-OTPs-are-updated.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0003-nvmem-stm32-add-nvmem-type-attribute.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0004-nvmem-stm32-fix-spelling-typo-in-comment.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0005-nvmem-Kconfig-Fix-spelling-mistake-controlls-control.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0006-nvmem-u-boot-env-add-Broadcom-format-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0007-nvmem-brcm_nvram-Add-check-for-kzalloc.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0008-nvmem-sunxi_sid-Always-use-32-bit-MMIO-reads.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/808-v6.2-0013-nvmem-core-fix-device-node-refcounting.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0001-nvmem-core-remove-spurious-white-space.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0002-nvmem-core-add-an-index-parameter-to-the-cell.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0003-nvmem-core-move-struct-nvmem_cell_info-to-nvmem-prov.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0004-nvmem-core-drop-the-removal-of-the-cells-in-nvmem_ad.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0005-nvmem-core-add-nvmem_add_one_cell.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0006-nvmem-core-use-nvmem_add_one_cell-in-nvmem_add_cells.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0007-nvmem-stm32-add-OP-TEE-support-for-STM32MP13x.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0008-nvmem-stm32-detect-bsec-pta-presence-for-STM32MP15x.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0009-nvmem-rave-sp-eeprm-fix-kernel-doc-bad-line-warning.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0010-nvmem-qcom-spmi-sdam-register-at-device-init-time.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/809-v6.3-0011-nvmem-stm32-fix-OPTEE-dependency.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/810-v5.17-net-qmi_wwan-add-ZTE-MF286D-modem-19d2-1485.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0001-nvmem-xilinx-zynqmp-make-modular.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0002-nvmem-core-introduce-NVMEM-layouts.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0003-nvmem-core-handle-the-absence-of-expected-layouts.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0004-nvmem-core-request-layout-modules-loading.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0005-nvmem-core-add-per-cell-post-processing.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0006-nvmem-core-allow-to-modify-a-cell-before-adding-it.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0007-nvmem-imx-ocotp-replace-global-post-processing-with-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0008-nvmem-cell-drop-global-cell_post_process.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0009-nvmem-core-provide-own-priv-pointer-in-post-process-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0010-nvmem-layouts-sl28vpd-Add-new-layout-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0011-nvmem-layouts-onie-tlv-Add-new-layout-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0012-nvmem-stm32-romem-mark-OF-related-data-as-maybe-unus.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0013-nvmem-mtk-efuse-Support-postprocessing-for-GPU-speed.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0014-nvmem-bcm-ocotp-Use-devm_platform_ioremap_resource.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0015-nvmem-nintendo-otp-Use-devm_platform_ioremap_resourc.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0016-nvmem-vf610-ocotp-Use-devm_platform_get_and_ioremap_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0017-nvmem-core-support-specifying-both-cell-raw-data-pos.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0018-nvmem-u-boot-env-post-process-ethaddr-env-variable.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0019-nvmem-Add-macro-to-register-nvmem-layout-drivers.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0020-nvmem-layouts-sl28vpd-Use-module_nvmem_layout_driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0021-nvmem-layouts-onie-tlv-Use-module_nvmem_layout_drive.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0022-nvmem-layouts-onie-tlv-Drop-wrong-module-alias.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/811-v6.4-0023-nvmem-layouts-sl28vpd-set-varaiable-sl28vpd_layout-s.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/812-v6.2-firmware-nvram-bcm47xx-support-init-from-IO-memory.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0001-nvmem-imx-ocotp-set-varaiable-imx_ocotp_layout-stora.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0002-nvmem-imx-ocotp-Reverse-MAC-addresses-on-all-i.MX-de.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0003-nvmem-brcm_nvram-add-.read_post_process-for-MACs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0004-nvmem-rockchip-otp-Add-clks-and-reg_read-to-rockchip.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0005-nvmem-rockchip-otp-Generalize-rockchip_otp_wait_stat.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0006-nvmem-rockchip-otp-Use-devm_reset_control_array_get_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0007-nvmem-rockchip-otp-Improve-probe-error-handling.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0008-nvmem-rockchip-otp-Add-support-for-RK3588.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0009-nvmem-zynqmp-Switch-xilinx.com-emails-to-amd.com.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0010-nvmem-imx-support-i.MX93-OCOTP.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/813-v6.5-0011-nvmem-core-add-support-for-fixed-cells-layout.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/814-v6.3-leds-Move-led_init_default_state_get-to-the-global-h.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-01-net-dsa-qca8k-move-qca8k_port_to_phy-to-header.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-02-net-dsa-qca8k-add-LEDs-basic-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-03-net-dsa-qca8k-add-LEDs-blink_set-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-04-leds-Provide-stubs-for-when-CLASS_LED-NEW_LEDS-are-d.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-05-net-phy-Add-a-binding-for-PHY-LEDs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-06-net-phy-phy_device-Call-into-the-PHY-driver-to-set-L.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-07-net-phy-marvell-Add-software-control-of-the-LEDs.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-08-net-phy-phy_device-Call-into-the-PHY-driver-to-set-L.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/815-v6.4-09-net-phy-marvell-Implement-led_blink_set.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/816-v6.4-net-phy-marvell-Fix-inconsistent-indenting-in-led_bl.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-02-leds-trigger-netdev-Drop-NETDEV_LED_MODE_LINKUP-from.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-03-leds-trigger-netdev-Rename-add-namespace-to-netdev-t.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-04-leds-trigger-netdev-Convert-device-attr-to-macro.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/817-v6.5-05-leds-trigger-netdev-Use-mutex-instead-of-spinlocks.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-01-leds-add-APIs-for-LEDs-hw-control.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-02-leds-add-API-to-get-attached-device-for-LED-hw-contr.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-03-Documentation-leds-leds-class-Document-new-Hardware-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-04-leds-trigger-netdev-refactor-code-setting-device-nam.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-05-leds-trigger-netdev-introduce-check-for-possible-hw-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-06-leds-trigger-netdev-add-basic-check-for-hw-control-s.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-07-leds-trigger-netdev-reject-interval-store-for-hw_con.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-08-leds-trigger-netdev-add-support-for-LED-hw-control.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-09-leds-trigger-netdev-validate-configured-netdev.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-10-leds-trigger-netdev-init-mode-if-hw-control-already-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-11-leds-trigger-netdev-expose-netdev-trigger-modes-in-l.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-12-net-dsa-qca8k-implement-hw_control-ops.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/818-v6.5-13-net-dsa-qca8k-add-op-to-get-ports-netdev.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0001-nvmem-sunxi_sid-Convert-to-devm_platform_ioremap_res.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0002-nvmem-brcm_nvram-Use-devm_platform_get_and_ioremap_r.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0003-nvmem-lpc18xx_otp-Convert-to-devm_platform_ioremap_r.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0004-nvmem-meson-mx-efuse-Convert-to-devm_platform_iorema.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0005-nvmem-rockchip-efuse-Use-devm_platform_get_and_iorem.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0006-nvmem-stm32-romem-Use-devm_platform_get_and_ioremap_.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0007-nvmem-qfprom-do-some-cleanup.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0008-nvmem-uniphier-Use-devm_platform_get_and_ioremap_res.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0009-nvmem-add-new-NXP-QorIQ-eFuse-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0011-nvmem-Kconfig-Fix-typo-drive-driver.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0012-nvmem-sec-qfprom-Add-Qualcomm-secure-QFPROM-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0013-nvmem-u-boot-env-Replace-zero-length-array-with-DECL.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0014-nvmem-core-Create-all-cells-before-adding-the-nvmem-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0015-nvmem-core-Return-NULL-when-no-nvmem-layout-is-found.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0016-nvmem-core-Do-not-open-code-existing-functions.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/819-v6.6-0017-nvmem-core-Notify-when-a-new-layout-is-registered.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0001-nvmem-qfprom-Mark-core-clk-as-optional.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0002-nvmem-add-explicit-config-option-to-read-old-syntax-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0003-nvmem-Use-device_get_match_data.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/820-v6.7-0004-Revert-nvmem-add-new-config-option.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/821-v5.16-Bluetooth-btusb-Support-public-address-configuration.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/822-v5.17-Bluetooth-btusb-Fix-application-of-sizeof-to-pointer.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/823-v5.18-Bluetooth-btusb-Add-a-new-PID-VID-13d3-3567-for-MT79.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/824-v5.19-Bluetooth-btusb-Add-a-new-PID-VID-0489-e0c8-for-MT79.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/825-v6.1-Bluetooth-btusb-Add-a-new-VID-PID-0e8d-0608-for-MT79.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/826-v5.17-of-base-make-small-of_parse_phandle-variants-static-.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0001-of-base-add-of_parse_phandle_with_optional_args.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0002-of-property-make-.-cells-optional-for-simple-props.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0003-of-property-add-nvmem-cell-cells-property.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0004-of-device-Ignore-modalias-of-reused-nodes.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/827-v6.3-0005-of-device-Do-not-ignore-error-code-in-of_device_ueve.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0002-of-Update-of_device_get_modalias.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0003-of-Rename-of_modalias_node.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0004-of-Move-of_modalias-to-module.c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/828-v6.4-0005-of-Move-the-request-module-helper-logic-to-module.c.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/831-v6.1-dt-bindings-leds-Expand-LED_COLOR_ID-definitions.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/833-v6.8-leds-core-Add-more-colors-from-DT-bindings-to-led_co.patch.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/835-v6.9-0001-dt-bindings-leds-Add-FUNCTION-defines-for-per-band-W.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/835-v6.9-0002-dt-bindings-leds-Add-LED_FUNCTION_WAN_ONLINE-for-Int.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/860-v5.17-MIPS-ath79-drop-_machine_restart-again.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/870-v5.18-hwmon-lm70-Add-ti-tmp125-support.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/880-v5.19-cdc_ether-export-usbnet_cdc_zte_rx_fixup.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/881-v5.19-rndis_host-enable-the-bogus-MAC-fixup-for-ZTE-device.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/882-v5.19-rndis_host-limit-scope-of-bogus-MAC-address-detectio.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/890-v6.2-mtd-spinand-winbond-fix-flash-detection.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/891-v6.2-mtd-spinand-winbond-add-W25N02KV.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/892-v6.5-mtd-spinand-winbond-Fix-ecc_get_status.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/893-v6.12-mtd-spinand-winbond-add-support-for-W25N01KV.patch
+# git am $open_wrt/target/linux/generic/backport-5.15/894-v6.8-net-ethtool-implement-ethtool_puts.patch
+
+git am  $open_wrt/target/linux/generic/hack-5.15/204-module_strip.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/205-kconfig-abort-configuration-on-unset-symbol.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/210-darwin_scripts_include.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/211-darwin-uuid-typedef-clash.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/212-tools_portability.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/214-spidev_h_portability.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/220-arm-gc_sections.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/221-module_exports.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/230-openwrt_lzma_options.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/250-netfilter_depends.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/251-kconfig.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/253-ksmbd-config.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/259-regmap_dynamic.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/260-crypto_test_dependencies.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/261-lib-arc4-unhide.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/280-rfkill-stubs.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/300-MIPS-r4k_cache-use-more-efficient-cache-blast.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/402-mtd-blktrans-call-add-disks-after-mtd-device.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/410-block-fit-partition-parser.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/420-mtd-support-OpenWrt-s-MTD_ROOTFS_ROOT_DEV.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/421-drivers-mtd-parsers-add-nvmem-support-to-cmdlinepart.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/430-mtk-bmt-support.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/601-of_net-add-mac-address-ascii-support.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/645-netfilter-connmark-introduce-set-dscpmark.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/650-netfilter-add-xt_FLOWOFFLOAD-target.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/651-wireless_mesh_header.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/660-fq_codel_defaults.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/661-kernel-ct-size-the-hashtable-more-adequately.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/700-swconfig_switch_drivers.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/711-net-dsa-mv88e6xxx-disable-ATU-violation.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/720-net-phy-add-aqr-phys.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/721-net-add-packet-mangeling.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/722-net-phy-aquantia-enable-AQR112-and-AQR412.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/723-net-phy-aquantia-fix-system-side-protocol-mi.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/724-net-phy-aquantia-Add-AQR113-driver-support.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/725-net-phy-aquantia-add-PHY_IDs-for-AQR112-variants.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/726-net-eth-dpaa2-eth-do-not-hold-rtnl_lock.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/750-net-pcs-mtk-lynxi-workaround-2500BaseX-no-an.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/760-net-usb-r8152-add-LED-configuration-from-OF.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/761-dt-bindings-net-add-RTL8152-binding-documentation.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/765-mxl-gpy-control-LED-reg-from-DT.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/766-net-phy-mediatek-ge-add-LED-configuration-interface.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/773-bgmac-add-srab-switch.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/780-usb-net-MeigLink_modem_support.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/781-usb-net-rndis-support-asr.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/790-SFP-GE-T-ignore-TX_FAULT.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/795-backport-phylink_pcs-helpers.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/800-GPIO-add-named-gpio-exports.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/810-bcma-ssb-fallback-sprom.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/901-debloat_sock_diag.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/902-debloat_proc.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/904-debloat_dma_buf.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/910-kobject_uevent.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/911-kobject_add_broadcast_uevent.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/920-device_tree_cmdline.patch
+git am  $open_wrt/target/linux/generic/hack-5.15/930-Revert-Revert-Revert-driver-core-Set-fw_devlink-on-b.patch
